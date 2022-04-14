@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TimeManagement.Properties {
+namespace Nhom1_20521086_LAB3.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace TimeManagement.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TimeManagement.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Nhom1_20521086_LAB3.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace TimeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_home_50 {
+        internal static System.Drawing.Bitmap background_6517956 {
             get {
-                object obj = ResourceManager.GetObject("icons8-home-50", resourceCulture);
+                object obj = ResourceManager.GetObject("background-6517956", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,19 +73,9 @@ namespace TimeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_app {
+        internal static System.Drawing.Bitmap blurry_1800138 {
             get {
-                object obj = ResourceManager.GetObject("logo_app", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Untitled_1 {
-            get {
-                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
+                object obj = ResourceManager.GetObject("blurry-1800138", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46387FB8-BC14-49E8-BC24-84794857601A}</ProjectGuid>
+    <ProjectGuid>{D23F50F4-4E61-4EB7-9443-877B3F8E5479}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TimeManagement</RootNamespace>
-    <AssemblyName>TimeManagement</AssemblyName>
+    <RootNamespace>Nhom1_20521086_LAB3</RootNamespace>
+    <AssemblyName>Nhom1_20521086_LAB3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,34 +46,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home.cs">
+    <Compile Include="LAB3_Bai4_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="LAB3_Bai4_Client.Designer.cs">
+      <DependentUpon>LAB3_Bai4_Client.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.cs">
+    <Compile Include="LAB3_Bai2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogIn.Designer.cs">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <Compile Include="LAB3_Bai2.Designer.cs">
+      <DependentUpon>LAB3_Bai2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="LAB3_Bai1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="LAB3_Bai1.Designer.cs">
+      <DependentUpon>LAB3_Bai1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAB3_Bai3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai3.Designer.cs">
+      <DependentUpon>LAB3_Bai3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAB3_Bai4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai4.Designer.cs">
+      <DependentUpon>LAB3_Bai4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAB3_Bai4_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai4_Server.Designer.cs">
+      <DependentUpon>LAB3_Bai4_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="LAB3_Bai1.resx">
+      <DependentUpon>LAB3_Bai1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <EmbeddedResource Include="LAB3_Bai2.resx">
+      <DependentUpon>LAB3_Bai2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="LAB3_Bai3.resx">
+      <DependentUpon>LAB3_Bai3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai4.resx">
+      <DependentUpon>LAB3_Bai4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai4_Client.resx">
+      <DependentUpon>LAB3_Bai4_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai4_Server.resx">
+      <DependentUpon>LAB3_Bai4_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,13 +135,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo_app.png" />
+    <None Include="Resources\background-6517956.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Untitled-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-home-50.png" />
+    <None Include="Resources\blurry-1800138.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
