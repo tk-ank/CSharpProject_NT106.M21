@@ -16,5 +16,36 @@ namespace TimeManagement
         {
             InitializeComponent();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            pnContent.Controls.Clear();
+            Home home = new Home()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            this.pnContent.Controls.Add(home);
+            home.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+           btnHome_Click(sender, e);
+        }
+
+        private void btnInfor_Click(object sender, EventArgs e)
+        {
+            pnContent.Controls.Clear();
+            Information infor = new Information()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            this.pnContent.Controls.Add(infor);
+            infor.Show();
+        }
     }
 }

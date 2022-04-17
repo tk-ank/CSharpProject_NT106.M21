@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.Title = new System.Windows.Forms.Label();
-            this.MessageShow = new System.Windows.Forms.TextBox();
             this.MessageText = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.ClientName = new System.Windows.Forms.Label();
             this.NameInput = new System.Windows.Forms.TextBox();
+            this.MessageShow = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // Title
@@ -43,23 +43,15 @@
             this.Title.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.Location = new System.Drawing.Point(124, 25);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(434, 54);
+            this.Title.Size = new System.Drawing.Size(352, 45);
             this.Title.TabIndex = 1;
             this.Title.Text = "CHAT ROOM - CLIENT";
-            // 
-            // MessageShow
-            // 
-            this.MessageShow.Location = new System.Drawing.Point(25, 110);
-            this.MessageShow.Multiline = true;
-            this.MessageShow.Name = "MessageShow";
-            this.MessageShow.Size = new System.Drawing.Size(550, 275);
-            this.MessageShow.TabIndex = 2;
             // 
             // MessageText
             // 
             this.MessageText.Location = new System.Drawing.Point(25, 400);
             this.MessageText.Name = "MessageText";
-            this.MessageText.Size = new System.Drawing.Size(450, 36);
+            this.MessageText.Size = new System.Drawing.Size(450, 30);
             this.MessageText.TabIndex = 3;
             // 
             // btnSend
@@ -79,7 +71,7 @@
             this.ClientName.BackColor = System.Drawing.Color.Transparent;
             this.ClientName.Location = new System.Drawing.Point(25, 75);
             this.ClientName.Name = "ClientName";
-            this.ClientName.Size = new System.Drawing.Size(137, 30);
+            this.ClientName.Size = new System.Drawing.Size(109, 23);
             this.ClientName.TabIndex = 5;
             this.ClientName.Text = "Client Name:";
             // 
@@ -88,21 +80,31 @@
             this.NameInput.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameInput.Location = new System.Drawing.Point(140, 75);
             this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(435, 32);
+            this.NameInput.Size = new System.Drawing.Size(435, 27);
             this.NameInput.TabIndex = 6;
+            // 
+            // MessageShow
+            // 
+            this.MessageShow.HideSelection = false;
+            this.MessageShow.Location = new System.Drawing.Point(25, 110);
+            this.MessageShow.Name = "MessageShow";
+            this.MessageShow.Size = new System.Drawing.Size(550, 275);
+            this.MessageShow.TabIndex = 7;
+            this.MessageShow.UseCompatibleStateImageBehavior = false;
+            this.MessageShow.View = System.Windows.Forms.View.List;
             // 
             // LAB3_Bai4_Client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Nhom1_20521086_LAB3.Properties.Resources.background_6517956;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 450);
+            this.Controls.Add(this.MessageShow);
             this.Controls.Add(this.NameInput);
             this.Controls.Add(this.ClientName);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.MessageText);
-            this.Controls.Add(this.MessageShow);
             this.Controls.Add(this.Title);
             this.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -111,6 +113,7 @@
             this.ShowIcon = false;
             this.Text = "Bài thực hành 3 - Nhóm 1 - Bài 4 - Client";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LAB3_Bai4_Client_FormClosed);
+            this.Load += new System.EventHandler(this.LAB3_Bai4_Client_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,10 +122,10 @@
         #endregion
 
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.TextBox MessageShow;
         private System.Windows.Forms.TextBox MessageText;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label ClientName;
         private System.Windows.Forms.TextBox NameInput;
+        private System.Windows.Forms.ListView MessageShow;
     }
 }
