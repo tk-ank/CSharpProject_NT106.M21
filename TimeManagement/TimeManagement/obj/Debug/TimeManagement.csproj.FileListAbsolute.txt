@@ -9,3 +9,6 @@ D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.CoreCompileInputs.cache
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.exe
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.pdb
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Home.resources
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Menu.resources
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Information.resources

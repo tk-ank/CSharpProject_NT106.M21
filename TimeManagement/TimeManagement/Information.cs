@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace TimeManagement
 {
-    public partial class Home : Form
+    public partial class Information : Form
     {
-        public Home()
+        public Information()
         {
             InitializeComponent();
         }
-
     }
 }

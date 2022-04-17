@@ -29,8 +29,7 @@ namespace Nhom1_20521086_LAB3
         void Connect()
         {
             IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
-            client = new Socket(AddressFamily.InterNetwork,
-            SocketType.Stream, ProtocolType.IP);
+            client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
             try
             {
                 client.Connect(IP);
@@ -43,11 +42,7 @@ namespace Nhom1_20521086_LAB3
             Thread listen = new Thread(Receive);
             listen.IsBackground = true;
             listen.Start();
-        }
-
-        void Disconnect()
-        {
-            client.Close();
+            AddMessage("Connected");
         }
 
         void Send()
@@ -67,12 +62,19 @@ namespace Nhom1_20521086_LAB3
                     byte[] data = new byte[1024 * 5000];
                     client.Receive(data);
                     string message = (string)Deserialize(data);
+                    AddMessage(message);
                 }
             }
             catch
             {
                 Close();
             }
+        }
+
+        void AddMessage(string s)
+        {
+            MessageShow.Items.Add(new ListViewItem() { Text = s });
+            MessageText.Clear();
         }
 
         byte[] Serialize(object obj)
@@ -97,7 +99,13 @@ namespace Nhom1_20521086_LAB3
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            Connect();
             Send();
+        }
+
+        private void LAB3_Bai4_Client_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
