@@ -32,6 +32,7 @@ namespace TimeManagement
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.header = new System.Windows.Forms.Panel();
+            this.ForgotPass = new System.Windows.Forms.Label();
             this.SignUp = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.bckLogIn = new System.Windows.Forms.Panel();
@@ -40,7 +41,6 @@ namespace TimeManagement
             this.AccountText = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
             this.Account = new System.Windows.Forms.Label();
-            this.ForgotPass = new System.Windows.Forms.Label();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.bckLogIn.SuspendLayout();
@@ -56,6 +56,17 @@ namespace TimeManagement
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(1000, 125);
             this.header.TabIndex = 0;
+            // 
+            // ForgotPass
+            // 
+            this.ForgotPass.AutoSize = true;
+            this.ForgotPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
+            this.ForgotPass.Location = new System.Drawing.Point(650, 85);
+            this.ForgotPass.Name = "ForgotPass";
+            this.ForgotPass.Size = new System.Drawing.Size(188, 31);
+            this.ForgotPass.TabIndex = 2;
+            this.ForgotPass.Text = "Quên mật khẩu?";
             // 
             // SignUp
             // 
@@ -107,6 +118,7 @@ namespace TimeManagement
             this.PasswordText.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordText.Location = new System.Drawing.Point(300, 150);
             this.PasswordText.Name = "PasswordText";
+            this.PasswordText.PasswordChar = '*';
             this.PasswordText.Size = new System.Drawing.Size(475, 51);
             this.PasswordText.TabIndex = 4;
             // 
@@ -139,17 +151,6 @@ namespace TimeManagement
             this.Account.Size = new System.Drawing.Size(249, 45);
             this.Account.TabIndex = 1;
             this.Account.Text = "Tên đăng nhập:";
-            // 
-            // ForgotPass
-            // 
-            this.ForgotPass.AutoSize = true;
-            this.ForgotPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
-            this.ForgotPass.Location = new System.Drawing.Point(650, 85);
-            this.ForgotPass.Name = "ForgotPass";
-            this.ForgotPass.Size = new System.Drawing.Size(188, 31);
-            this.ForgotPass.TabIndex = 2;
-            this.ForgotPass.Text = "Quên mật khẩu?";
             // 
             // LogIn
             // 
