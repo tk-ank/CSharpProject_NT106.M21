@@ -33,39 +33,39 @@ namespace TimeManagement
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.pnLogout = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pnTodo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnTodo = new System.Windows.Forms.Button();
             this.pnDeadline = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDeadline = new System.Windows.Forms.Button();
             this.pnSchedule = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSchedule = new System.Windows.Forms.Button();
             this.pnUser = new System.Windows.Forms.Panel();
+            this.UserPic = new System.Windows.Forms.PictureBox();
             this.btnInfor = new System.Windows.Forms.Button();
             this.pnHome = new System.Windows.Forms.Panel();
+            this.HomePic = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnContent = new System.Windows.Forms.Panel();
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.UserPic = new System.Windows.Forms.PictureBox();
-            this.HomePic = new System.Windows.Forms.PictureBox();
             this.pnMenu.SuspendLayout();
-            this.pnLogout.SuspendLayout();
-            this.pnTodo.SuspendLayout();
-            this.pnDeadline.SuspendLayout();
-            this.pnSchedule.SuspendLayout();
-            this.pnUser.SuspendLayout();
-            this.pnHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.pnLogout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pnTodo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnDeadline.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnSchedule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserPic)).BeginInit();
+            this.pnHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +85,17 @@ namespace TimeManagement
             this.pnMenu.Size = new System.Drawing.Size(325, 800);
             this.pnMenu.TabIndex = 0;
             // 
+            // Logo
+            // 
+            this.Logo.Image = global::TimeManagement.Properties.Resources.logo_app1;
+            this.Logo.Location = new System.Drawing.Point(59, 75);
+            this.Logo.Margin = new System.Windows.Forms.Padding(2);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(206, 81);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 6;
+            this.Logo.TabStop = false;
+            // 
             // pnLogout
             // 
             this.pnLogout.Controls.Add(this.pictureBox5);
@@ -94,6 +105,17 @@ namespace TimeManagement
             this.pnLogout.Name = "pnLogout";
             this.pnLogout.Size = new System.Drawing.Size(325, 75);
             this.pnLogout.TabIndex = 5;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_logout_30__1_;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
             // 
             // btnLogout
             // 
@@ -122,6 +144,17 @@ namespace TimeManagement
             this.pnTodo.Size = new System.Drawing.Size(325, 75);
             this.pnTodo.TabIndex = 4;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_todo_list_64;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnTodo
             // 
             this.btnTodo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -148,6 +181,17 @@ namespace TimeManagement
             this.pnDeadline.Name = "pnDeadline";
             this.pnDeadline.Size = new System.Drawing.Size(325, 75);
             this.pnDeadline.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_deadline_64;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // btnDeadline
             // 
@@ -176,6 +220,18 @@ namespace TimeManagement
             this.pnSchedule.Size = new System.Drawing.Size(325, 75);
             this.pnSchedule.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Image = global::TimeManagement.Properties.Resources.icons8_schedule_48;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnSchedule
             // 
             this.btnSchedule.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -192,6 +248,7 @@ namespace TimeManagement
             this.btnSchedule.Text = "Thời khóa biểu";
             this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSchedule.UseVisualStyleBackColor = false;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
             // pnUser
             // 
@@ -202,6 +259,17 @@ namespace TimeManagement
             this.pnUser.Name = "pnUser";
             this.pnUser.Size = new System.Drawing.Size(325, 75);
             this.pnUser.TabIndex = 1;
+            // 
+            // UserPic
+            // 
+            this.UserPic.Image = global::TimeManagement.Properties.Resources.icons8_person_64;
+            this.UserPic.Location = new System.Drawing.Point(25, 25);
+            this.UserPic.Margin = new System.Windows.Forms.Padding(2);
+            this.UserPic.Name = "UserPic";
+            this.UserPic.Size = new System.Drawing.Size(25, 25);
+            this.UserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UserPic.TabIndex = 1;
+            this.UserPic.TabStop = false;
             // 
             // btnInfor
             // 
@@ -231,6 +299,17 @@ namespace TimeManagement
             this.pnHome.Size = new System.Drawing.Size(325, 75);
             this.pnHome.TabIndex = 0;
             // 
+            // HomePic
+            // 
+            this.HomePic.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_home_50;
+            this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomePic.Location = new System.Drawing.Point(25, 25);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(2);
+            this.HomePic.Name = "HomePic";
+            this.HomePic.Size = new System.Drawing.Size(25, 25);
+            this.HomePic.TabIndex = 1;
+            this.HomePic.TabStop = false;
+            // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -257,84 +336,6 @@ namespace TimeManagement
             this.pnContent.Size = new System.Drawing.Size(875, 800);
             this.pnContent.TabIndex = 1;
             // 
-            // Logo
-            // 
-            this.Logo.Image = global::TimeManagement.Properties.Resources.logo_app1;
-            this.Logo.Location = new System.Drawing.Point(59, 75);
-            this.Logo.Margin = new System.Windows.Forms.Padding(2);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(206, 81);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 6;
-            this.Logo.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_logout_30__1_;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_todo_list_64;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_deadline_64;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Image = global::TimeManagement.Properties.Resources.icons8_schedule_48;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // UserPic
-            // 
-            this.UserPic.Image = global::TimeManagement.Properties.Resources.icons8_person_64;
-            this.UserPic.Location = new System.Drawing.Point(25, 25);
-            this.UserPic.Margin = new System.Windows.Forms.Padding(2);
-            this.UserPic.Name = "UserPic";
-            this.UserPic.Size = new System.Drawing.Size(25, 25);
-            this.UserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UserPic.TabIndex = 1;
-            this.UserPic.TabStop = false;
-            // 
-            // HomePic
-            // 
-            this.HomePic.BackgroundImage = global::TimeManagement.Properties.Resources.icons8_home_50;
-            this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.HomePic.Location = new System.Drawing.Point(25, 25);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(2);
-            this.HomePic.Name = "HomePic";
-            this.HomePic.Size = new System.Drawing.Size(25, 25);
-            this.HomePic.TabIndex = 1;
-            this.HomePic.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,18 +352,18 @@ namespace TimeManagement
             this.Text = "Time Management";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.pnMenu.ResumeLayout(false);
-            this.pnLogout.ResumeLayout(false);
-            this.pnTodo.ResumeLayout(false);
-            this.pnDeadline.ResumeLayout(false);
-            this.pnSchedule.ResumeLayout(false);
-            this.pnUser.ResumeLayout(false);
-            this.pnHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            this.pnLogout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.pnTodo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnDeadline.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnSchedule.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UserPic)).EndInit();
+            this.pnHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
             this.ResumeLayout(false);
 
