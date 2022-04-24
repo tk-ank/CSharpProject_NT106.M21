@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
-            this.SuspendLayout();
-=======
             this.pnTitle = new System.Windows.Forms.Panel();
             this.University = new System.Windows.Forms.Label();
             this.Username = new System.Windows.Forms.Label();
@@ -203,8 +200,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(875, 800);
-<<<<<<< Updated upstream
-=======
             this.Controls.Add(this.btnEdition);
             this.Controls.Add(this.pnTitle);
             this.Controls.Add(this.btnEdit);
@@ -215,27 +210,19 @@
             this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.Sex);
             this.Controls.Add(this.Birthday);
->>>>>>> Stashed changes
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Information";
             this.Text = "Information";
-<<<<<<< Updated upstream
-            this.ResumeLayout(false);            
-=======
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
->>>>>>> Stashed changes
         }
 
         #endregion
 
-<<<<<<< Updated upstream
-
-=======
         private System.Windows.Forms.Panel pnTitle;
         private System.Windows.Forms.Label University;
         private System.Windows.Forms.Label Username;
@@ -249,6 +236,5 @@
         private System.Windows.Forms.Label Sex;
         private System.Windows.Forms.Label Birthday;
         private System.Windows.Forms.Button btnEdition;
->>>>>>> Stashed changes
     }
 }

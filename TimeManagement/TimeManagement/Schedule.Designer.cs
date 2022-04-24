@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Schedule));
             this.pnTitle = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
@@ -143,6 +144,114 @@
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
+=======
+            this.Title = new System.Windows.Forms.Label();
+            this.pnTitle = new System.Windows.Forms.Panel();
+            this.pnSchedule = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.pnFirst = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.pnDate = new System.Windows.Forms.Panel();
+            this.btnSaturday = new System.Windows.Forms.Button();
+            this.btnFriday = new System.Windows.Forms.Button();
+            this.btnThurday = new System.Windows.Forms.Button();
+            this.btnWednesday = new System.Windows.Forms.Button();
+            this.btnTuesday = new System.Windows.Forms.Button();
+            this.btnMonday = new System.Windows.Forms.Button();
+            this.btnTime = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button36 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button43 = new System.Windows.Forms.Button();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button49 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button50 = new System.Windows.Forms.Button();
+            this.button51 = new System.Windows.Forms.Button();
+            this.button52 = new System.Windows.Forms.Button();
+            this.button53 = new System.Windows.Forms.Button();
+            this.button54 = new System.Windows.Forms.Button();
+            this.button55 = new System.Windows.Forms.Button();
+            this.button56 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button60 = new System.Windows.Forms.Button();
+            this.button61 = new System.Windows.Forms.Button();
+            this.button62 = new System.Windows.Forms.Button();
+            this.button63 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button65 = new System.Windows.Forms.Button();
+            this.button66 = new System.Windows.Forms.Button();
+            this.button67 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button70 = new System.Windows.Forms.Button();
+            this.pnTitle.SuspendLayout();
+            this.pnSchedule.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnFirst.SuspendLayout();
+            this.pnDate.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.SuspendLayout();
+            // 
+>>>>>>> Stashed changes
             // Title
             // 
             this.Title.AutoSize = true;
@@ -154,12 +263,16 @@
             this.Title.TabIndex = 0;
             this.Title.Text = "Thời khóa biểu";
             // 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             // pnTitle
             // 
             this.pnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(81)))), ((int)(((byte)(153)))));
             this.pnTitle.Controls.Add(this.Title);
             this.pnTitle.Location = new System.Drawing.Point(0, 0);
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             this.pnTitle.Margin = new System.Windows.Forms.Padding(2);
             this.pnTitle.Name = "pnTitle";
@@ -190,6 +303,8 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel1.TabIndex = 3;
 =======
+=======
+>>>>>>> Stashed changes
             this.pnTitle.Margin = new System.Windows.Forms.Padding(4);
             this.pnTitle.Name = "pnTitle";
             this.pnTitle.Size = new System.Drawing.Size(875, 200);
@@ -1150,6 +1265,9 @@
             this.button70.TabIndex = 0;
             this.button70.Text = "16:15 - 17:00";
             this.button70.UseVisualStyleBackColor = true;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             // 
             // Schedule
@@ -1158,6 +1276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(875, 800);
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pnTitle);
@@ -1168,12 +1287,20 @@
             this.Controls.Add(this.pnTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 >>>>>>> Stashed changes
+=======
+            this.Controls.Add(this.pnSchedule);
+            this.Controls.Add(this.pnTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+>>>>>>> Stashed changes
             this.Name = "Schedule";
             this.Text = "Schedule";
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
             this.pnSchedule.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1186,6 +1313,9 @@
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             this.ResumeLayout(false);
 
@@ -1194,10 +1324,13 @@
         #endregion
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         private System.Windows.Forms.Panel pnTitle;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 =======
+=======
+>>>>>>> Stashed changes
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel pnTitle;
         private System.Windows.Forms.Panel pnSchedule;
@@ -1289,6 +1422,9 @@
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Button button42;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }

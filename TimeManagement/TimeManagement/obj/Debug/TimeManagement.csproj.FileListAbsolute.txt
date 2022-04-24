@@ -32,6 +32,7 @@ D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.exe
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\Accord.dll.config
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\Accord.dll
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\Accord.Math.Core.dll
@@ -42,5 +43,7 @@ D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\Accord.Math.Core.xml
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\Aspose.PDF.xml
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.CopyComplete
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
