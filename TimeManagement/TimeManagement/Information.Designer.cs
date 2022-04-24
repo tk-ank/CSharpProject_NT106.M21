@@ -180,7 +180,7 @@
             this.Birthday.Size = new System.Drawing.Size(117, 30);
             this.Birthday.TabIndex = 11;
             this.Birthday.Text = "Ngày sinh:";
-            // 
+  /*          // 
             // btnEdition
             // 
             this.btnEdition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(81)))), ((int)(((byte)(153)))));
@@ -192,7 +192,7 @@
             this.btnEdition.TabIndex = 19;
             this.btnEdition.Text = "Chỉnh sửa thông tin";
             this.btnEdition.UseVisualStyleBackColor = false;
->>>>>>> Stashed changes
+            */
             // 
             // University
             // 
