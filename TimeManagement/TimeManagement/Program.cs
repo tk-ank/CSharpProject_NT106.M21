@@ -16,7 +16,12 @@ namespace TimeManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new Form1());
+=======
+            //Application.Run(new Menu());
+            Application.Run(new LogIn());
+>>>>>>> Stashed changes
         }
     }
 }

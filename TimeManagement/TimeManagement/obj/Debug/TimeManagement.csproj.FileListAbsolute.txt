@@ -12,6 +12,7 @@ D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Home.resources
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Menu.resources
 D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Information.resources
+<<<<<<< Updated upstream
 C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\TimeManagement.exe.config
 C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\TimeManagement.exe
 C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\TimeManagement.pdb
@@ -26,3 +27,19 @@ C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\o
 C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.CoreCompileInputs.cache
 C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.exe
 C:\Users\phuon\Downloads\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.pdb
+=======
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\TimeManagement.exe.config
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\TimeManagement.exe
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\bin\Debug\TimeManagement.pdb
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.AssemblyReference.cache
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Home.resources
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Information.resources
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.LogIn.resources
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Menu.resources
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Properties.Resources.resources
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.GenerateResource.cache
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.CoreCompileInputs.cache
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.exe
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.pdb
+D:\LT mạng căn bản\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.SignUp.resources
+>>>>>>> Stashed changes
