@@ -53,7 +53,11 @@ namespace TimeManagement
             pnContent.Controls.Clear();
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             Schedule TKB = new Schedule()
+=======
+            Schedule tkb = new Schedule()
+>>>>>>> Stashed changes
 =======
             Schedule tkb = new Schedule()
 >>>>>>> Stashed changes
@@ -67,8 +71,13 @@ namespace TimeManagement
             };
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.pnContent.Controls.Add(TKB);
             TKB.Show();
+=======
+            this.pnContent.Controls.Add(tkb);
+            tkb.Show();
+>>>>>>> Stashed changes
 =======
             this.pnContent.Controls.Add(tkb);
             tkb.Show();
