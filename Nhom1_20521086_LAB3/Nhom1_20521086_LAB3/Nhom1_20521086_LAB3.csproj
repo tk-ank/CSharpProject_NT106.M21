@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LAB3_Bai1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai1.Designer.cs">
+      <DependentUpon>LAB3_Bai1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAB3_Bai1_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai1_Client.Designer.cs">
+      <DependentUpon>LAB3_Bai1_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAB3_Bai3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai3.Designer.cs">
+      <DependentUpon>LAB3_Bai3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LAB3_Bai3_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAB3_Bai3_Server.Designer.cs">
+      <DependentUpon>LAB3_Bai3_Server.cs</DependentUpon>
+    </Compile>
     <Compile Include="LAB3_Bai4_Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,17 +82,17 @@
     <Compile Include="LAB3_Bai2.Designer.cs">
       <DependentUpon>LAB3_Bai2.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAB3_Bai1.cs">
+    <Compile Include="LAB3_Bai1_Server.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LAB3_Bai1.Designer.cs">
-      <DependentUpon>LAB3_Bai1.cs</DependentUpon>
+    <Compile Include="LAB3_Bai1_Server.Designer.cs">
+      <DependentUpon>LAB3_Bai1_Server.cs</DependentUpon>
     </Compile>
-    <Compile Include="LAB3_Bai3.cs">
+    <Compile Include="LAB3_Bai3_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LAB3_Bai3.Designer.cs">
-      <DependentUpon>LAB3_Bai3.cs</DependentUpon>
+    <Compile Include="LAB3_Bai3_Client.Designer.cs">
+      <DependentUpon>LAB3_Bai3_Client.cs</DependentUpon>
     </Compile>
     <Compile Include="LAB3_Bai4.cs">
       <SubType>Form</SubType>
@@ -93,11 +117,23 @@
     <EmbeddedResource Include="LAB3_Bai1.resx">
       <DependentUpon>LAB3_Bai1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai1_Client.resx">
+      <DependentUpon>LAB3_Bai1_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai1_Server.resx">
+      <DependentUpon>LAB3_Bai1_Server.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LAB3_Bai2.resx">
       <DependentUpon>LAB3_Bai2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LAB3_Bai3.resx">
       <DependentUpon>LAB3_Bai3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai3_Client.resx">
+      <DependentUpon>LAB3_Bai3_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAB3_Bai3_Server.resx">
+      <DependentUpon>LAB3_Bai3_Server.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LAB3_Bai4.resx">
       <DependentUpon>LAB3_Bai4.cs</DependentUpon>

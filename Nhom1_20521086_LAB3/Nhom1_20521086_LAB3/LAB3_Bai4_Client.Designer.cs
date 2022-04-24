@@ -34,6 +34,7 @@
             this.ClientName = new System.Windows.Forms.Label();
             this.NameInput = new System.Windows.Forms.TextBox();
             this.MessageShow = new System.Windows.Forms.ListView();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Title
@@ -80,8 +81,9 @@
             this.NameInput.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameInput.Location = new System.Drawing.Point(140, 75);
             this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(435, 27);
+            this.NameInput.Size = new System.Drawing.Size(325, 27);
             this.NameInput.TabIndex = 6;
+            this.NameInput.TextChanged += new System.EventHandler(this.NameInput_TextChanged);
             // 
             // MessageShow
             // 
@@ -93,6 +95,17 @@
             this.MessageShow.UseCompatibleStateImageBehavior = false;
             this.MessageShow.View = System.Windows.Forms.View.List;
             // 
+            // btnConnect
+            // 
+            this.btnConnect.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.Location = new System.Drawing.Point(475, 74);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(100, 30);
+            this.btnConnect.TabIndex = 8;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // LAB3_Bai4_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -100,6 +113,7 @@
             this.BackgroundImage = global::Nhom1_20521086_LAB3.Properties.Resources.background_6517956;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 450);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.MessageShow);
             this.Controls.Add(this.NameInput);
             this.Controls.Add(this.ClientName);
@@ -112,7 +126,6 @@
             this.Name = "LAB3_Bai4_Client";
             this.ShowIcon = false;
             this.Text = "Bài thực hành 3 - Nhóm 1 - Bài 4 - Client";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LAB3_Bai4_Client_FormClosed);
             this.Load += new System.EventHandler(this.LAB3_Bai4_Client_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Label ClientName;
         private System.Windows.Forms.TextBox NameInput;
         private System.Windows.Forms.ListView MessageShow;
+        private System.Windows.Forms.Button btnConnect;
     }
 }

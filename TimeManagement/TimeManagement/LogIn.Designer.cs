@@ -34,16 +34,16 @@ namespace TimeManagement
             this.header = new System.Windows.Forms.Panel();
             this.ForgotPass = new System.Windows.Forms.Label();
             this.SignUp = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.bckLogIn = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.PasswordText = new System.Windows.Forms.TextBox();
             this.AccountText = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
             this.Account = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.bckLogIn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -53,8 +53,9 @@ namespace TimeManagement
             this.header.Controls.Add(this.SignUp);
             this.header.Controls.Add(this.Logo);
             this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1000, 125);
+            this.header.Size = new System.Drawing.Size(750, 102);
             this.header.TabIndex = 0;
             // 
             // ForgotPass
@@ -62,32 +63,25 @@ namespace TimeManagement
             this.ForgotPass.AutoSize = true;
             this.ForgotPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
-            this.ForgotPass.Location = new System.Drawing.Point(650, 85);
+            this.ForgotPass.Location = new System.Drawing.Point(488, 69);
+            this.ForgotPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ForgotPass.Name = "ForgotPass";
-            this.ForgotPass.Size = new System.Drawing.Size(188, 31);
+            this.ForgotPass.Size = new System.Drawing.Size(156, 25);
             this.ForgotPass.TabIndex = 2;
             this.ForgotPass.Text = "Quên mật khẩu?";
+            this.ForgotPass.Click += new System.EventHandler(this.ForgotPass_Click);
             // 
             // SignUp
             // 
             this.SignUp.AutoSize = true;
             this.SignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
-            this.SignUp.Location = new System.Drawing.Point(875, 85);
+            this.SignUp.Location = new System.Drawing.Point(656, 69);
+            this.SignUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(102, 31);
+            this.SignUp.Size = new System.Drawing.Size(86, 25);
             this.SignUp.TabIndex = 1;
             this.SignUp.Text = "Đăng ký";
-            // 
-            // Logo
-            // 
-            this.Logo.BackgroundImage = global::TimeManagement.Properties.Resources.logo_app;
-            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(425, 125);
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
             // 
             // bckLogIn
             // 
@@ -96,9 +90,10 @@ namespace TimeManagement
             this.bckLogIn.Controls.Add(this.AccountText);
             this.bckLogIn.Controls.Add(this.Password);
             this.bckLogIn.Controls.Add(this.Account);
-            this.bckLogIn.Location = new System.Drawing.Point(100, 150);
+            this.bckLogIn.Location = new System.Drawing.Point(75, 122);
+            this.bckLogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bckLogIn.Name = "bckLogIn";
-            this.bckLogIn.Size = new System.Drawing.Size(800, 350);
+            this.bckLogIn.Size = new System.Drawing.Size(600, 284);
             this.bckLogIn.TabIndex = 1;
             // 
             // btnLogin
@@ -106,9 +101,10 @@ namespace TimeManagement
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(81)))), ((int)(((byte)(153)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
-            this.btnLogin.Location = new System.Drawing.Point(25, 250);
+            this.btnLogin.Location = new System.Drawing.Point(19, 203);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(750, 75);
+            this.btnLogin.Size = new System.Drawing.Size(562, 61);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -116,18 +112,20 @@ namespace TimeManagement
             // PasswordText
             // 
             this.PasswordText.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordText.Location = new System.Drawing.Point(300, 150);
+            this.PasswordText.Location = new System.Drawing.Point(225, 122);
+            this.PasswordText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.PasswordChar = '*';
-            this.PasswordText.Size = new System.Drawing.Size(475, 51);
+            this.PasswordText.Size = new System.Drawing.Size(357, 43);
             this.PasswordText.TabIndex = 4;
             // 
             // AccountText
             // 
             this.AccountText.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountText.Location = new System.Drawing.Point(300, 50);
+            this.AccountText.Location = new System.Drawing.Point(225, 41);
+            this.AccountText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AccountText.Name = "AccountText";
-            this.AccountText.Size = new System.Drawing.Size(475, 51);
+            this.AccountText.Size = new System.Drawing.Size(357, 43);
             this.AccountText.TabIndex = 3;
             // 
             // Password
@@ -135,9 +133,10 @@ namespace TimeManagement
             this.Password.AutoSize = true;
             this.Password.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.Password.Location = new System.Drawing.Point(25, 150);
+            this.Password.Location = new System.Drawing.Point(19, 122);
+            this.Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(169, 45);
+            this.Password.Size = new System.Drawing.Size(140, 37);
             this.Password.TabIndex = 2;
             this.Password.Text = "Mật khẩu:";
             // 
@@ -146,33 +145,46 @@ namespace TimeManagement
             this.Account.AutoSize = true;
             this.Account.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Account.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.Account.Location = new System.Drawing.Point(25, 50);
+            this.Account.Location = new System.Drawing.Point(19, 41);
+            this.Account.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Account.Name = "Account";
-            this.Account.Size = new System.Drawing.Size(249, 45);
+            this.Account.Size = new System.Drawing.Size(204, 37);
             this.Account.TabIndex = 1;
             this.Account.Text = "Tên đăng nhập:";
             // 
+            // Logo
+            // 
+            this.Logo.BackgroundImage = global::TimeManagement.Properties.Resources.logo_app;
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Margin = new System.Windows.Forms.Padding(2);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(319, 102);
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
+            // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
-            this.ClientSize = new System.Drawing.Size(1000, 550);
+            this.ClientSize = new System.Drawing.Size(750, 447);
             this.Controls.Add(this.bckLogIn);
             this.Controls.Add(this.header);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Time Management";
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.bckLogIn.ResumeLayout(false);
             this.bckLogIn.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }

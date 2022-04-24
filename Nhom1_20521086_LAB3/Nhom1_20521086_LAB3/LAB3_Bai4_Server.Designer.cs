@@ -30,7 +30,6 @@
         {
             this.Title = new System.Windows.Forms.Label();
             this.btnListen = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
             this.MessageShow = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
@@ -47,22 +46,13 @@
             // 
             // btnListen
             // 
-            this.btnListen.Location = new System.Drawing.Point(250, 80);
+            this.btnListen.Location = new System.Drawing.Point(425, 82);
             this.btnListen.Name = "btnListen";
             this.btnListen.Size = new System.Drawing.Size(150, 35);
             this.btnListen.TabIndex = 2;
             this.btnListen.Text = "Listen";
             this.btnListen.UseVisualStyleBackColor = true;
             this.btnListen.Click += new System.EventHandler(this.btnListen_Click);
-            // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(425, 80);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(150, 35);
-            this.btnStop.TabIndex = 3;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
             // 
             // MessageShow
             // 
@@ -82,7 +72,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 450);
             this.Controls.Add(this.MessageShow);
-            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnListen);
             this.Controls.Add(this.Title);
             this.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,7 +80,6 @@
             this.Name = "LAB3_Bai4_Server";
             this.ShowIcon = false;
             this.Text = "Bài thực hành 3 - Nhóm 1 - Bài 4 - Server";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LAB3_Bai4_Server_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +89,6 @@
 
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button btnListen;
-        private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.ListView MessageShow;
     }
 }
