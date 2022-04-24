@@ -47,5 +47,18 @@ namespace TimeManagement
             this.pnContent.Controls.Add(infor);
             infor.Show();
         }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            pnContent.Controls.Clear();
+            Schedule TKB = new Schedule()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            this.pnContent.Controls.Add(TKB);
+            TKB.Show();
+        }
     }
 }
