@@ -56,8 +56,6 @@
             this.pnTitle.Name = "pnTitle";
             this.pnTitle.Size = new System.Drawing.Size(875, 200);
             this.pnTitle.TabIndex = 10;
-<<<<<<< Updated upstream
-=======
             // 
             // University
             // 
@@ -332,7 +330,6 @@
             this.btnEdition.Text = "Chỉnh sửa thông tin";
             this.btnEdition.UseVisualStyleBackColor = false;
             // 
->>>>>>> Stashed changes
             // Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
