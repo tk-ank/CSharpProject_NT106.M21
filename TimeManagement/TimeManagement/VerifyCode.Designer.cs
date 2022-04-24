@@ -31,6 +31,9 @@
             this.pnForgot = new System.Windows.Forms.Panel();
             this.LogoPic = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.Label();
+            this.CodeText = new System.Windows.Forms.TextBox();
+            this.Verify = new System.Windows.Forms.Label();
+            this.btnConform = new System.Windows.Forms.Button();
             this.pnForgot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
             this.SuspendLayout();
@@ -66,12 +69,46 @@
             this.Title.TabIndex = 5;
             this.Title.Text = "XÁC NHẬN DANH TÍNH";
             // 
+            // CodeText
+            // 
+            this.CodeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CodeText.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodeText.Location = new System.Drawing.Point(25, 165);
+            this.CodeText.Name = "CodeText";
+            this.CodeText.Size = new System.Drawing.Size(350, 30);
+            this.CodeText.TabIndex = 6;
+            // 
+            // Verify
+            // 
+            this.Verify.AutoSize = true;
+            this.Verify.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Verify.Location = new System.Drawing.Point(25, 140);
+            this.Verify.Name = "Verify";
+            this.Verify.Size = new System.Drawing.Size(97, 20);
+            this.Verify.TabIndex = 7;
+            this.Verify.Text = "Mã xác nhận";
+            // 
+            // btnConform
+            // 
+            this.btnConform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(81)))), ((int)(((byte)(153)))));
+            this.btnConform.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConform.ForeColor = System.Drawing.Color.White;
+            this.btnConform.Location = new System.Drawing.Point(275, 205);
+            this.btnConform.Name = "btnConform";
+            this.btnConform.Size = new System.Drawing.Size(100, 35);
+            this.btnConform.TabIndex = 8;
+            this.btnConform.Text = "Xác nhận";
+            this.btnConform.UseVisualStyleBackColor = false;
+            // 
             // VerifyCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(400, 250);
+            this.Controls.Add(this.btnConform);
+            this.Controls.Add(this.Verify);
+            this.Controls.Add(this.CodeText);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.pnForgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -89,5 +126,8 @@
         private System.Windows.Forms.Panel pnForgot;
         private System.Windows.Forms.PictureBox LogoPic;
         private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.TextBox CodeText;
+        private System.Windows.Forms.Label Verify;
+        private System.Windows.Forms.Button btnConform;
     }
 }

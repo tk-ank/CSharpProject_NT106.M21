@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Title = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EmailText = new System.Windows.Forms.TextBox();
             this.Verify = new System.Windows.Forms.Label();
             this.pnForgot = new System.Windows.Forms.Panel();
             this.LogoPic = new System.Windows.Forms.PictureBox();
@@ -51,14 +51,14 @@
             this.Title.TabIndex = 0;
             this.Title.Text = "XÁC NHẬN EMAIL";
             // 
-            // textBox1
+            // EmailText
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(25, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 30);
-            this.textBox1.TabIndex = 1;
+            this.EmailText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmailText.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailText.Location = new System.Drawing.Point(25, 155);
+            this.EmailText.Name = "EmailText";
+            this.EmailText.Size = new System.Drawing.Size(350, 30);
+            this.EmailText.TabIndex = 1;
             // 
             // Verify
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.btnConform);
             this.Controls.Add(this.pnForgot);
             this.Controls.Add(this.Verify);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.EmailText);
             this.Controls.Add(this.Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPass";
@@ -138,7 +138,7 @@
         #endregion
 
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EmailText;
         private System.Windows.Forms.Label Verify;
         private System.Windows.Forms.Panel pnForgot;
         private System.Windows.Forms.PictureBox LogoPic;
