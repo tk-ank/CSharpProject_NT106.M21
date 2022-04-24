@@ -17,8 +17,10 @@ namespace Nhom1_20521086_LAB3
 {
     public partial class LAB3_Bai4_Client : Form
     {
-        IPEndPoint IP;
-        Socket client;
+        IPEndPoint IPServer;
+        TcpClient client;
+        StreamReader read;
+        StreamWriter write;
 
         public LAB3_Bai4_Client()
         {
@@ -28,46 +30,53 @@ namespace Nhom1_20521086_LAB3
 
         void Connect()
         {
-            IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
-            client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+            IPServer = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
+            client = new TcpClient();
             try
             {
-                client.Connect(IP);
+                client.Connect(IPServer);
+                read = new StreamReader(client.GetStream());
+                write = new StreamWriter(client.GetStream());
+                Thread listen = new Thread(new ThreadStart(Receive));
+                listen.IsBackground = true;
+                listen.Start();
+                SendConnection();
             }
             catch
             {
                 MessageBox.Show("Lỗi kết nối", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Thread listen = new Thread(Receive);
-            listen.IsBackground = true;
-            listen.Start();
-            AddMessage("Connected");
         }
 
-        void Send()
+        void SendConnection()
         {
-            if (MessageText.Text != string.Empty)
+            write.WriteLine(NameInput.Text + " connected to server");
+            write.Flush();
+            MessageText.Text = "";
+        }
+
+        void Send(string str)
+        {
+            if (str != string.Empty)
             {
-                client.Send(Serialize(MessageText.Text));
+                write.WriteLine(NameInput.Text + ": " + str);
+                write.Flush();
+                MessageText.Text = "";
             }
         }
 
         void Receive()
         {
-            try
+
+            while (true)
             {
-                while (true)
+                if (read.EndOfStream == false)
                 {
                     byte[] data = new byte[1024 * 5000];
-                    client.Receive(data);
-                    string message = (string)Deserialize(data);
+                    string message = read.ReadLine();
                     AddMessage(message);
                 }
-            }
-            catch
-            {
-                Close();
             }
         }
 
@@ -77,35 +86,30 @@ namespace Nhom1_20521086_LAB3
             MessageText.Clear();
         }
 
-        byte[] Serialize(object obj)
+        private void btnConnect_Click(object sender, EventArgs e)
         {
-            MemoryStream stream = new MemoryStream();
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(stream, obj);
-            return stream.ToArray();
-        }
-
-        object Deserialize(byte[] data)
-        {
-            MemoryStream stream = new MemoryStream(data);
-            BinaryFormatter formatter = new BinaryFormatter();
-            return formatter.Deserialize(stream);
-        }
-
-        private void LAB3_Bai4_Client_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Close();
+            btnSend.Enabled = true;
+            Connect();
+            btnConnect.Enabled = false;
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            Connect();
-            Send();
+            Send(MessageText.Text);
+        }
+
+        private void NameInput_TextChanged(object sender, EventArgs e)
+        {
+            if (NameInput.Text != "")
+                btnConnect.Enabled = true;
+            else
+                btnConnect.Enabled = false;
         }
 
         private void LAB3_Bai4_Client_Load(object sender, EventArgs e)
         {
-            
+            btnConnect.Enabled = false;
+            btnSend.Enabled = false;
         }
     }
 }

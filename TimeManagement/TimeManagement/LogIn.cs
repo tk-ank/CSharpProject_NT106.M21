@@ -18,6 +18,11 @@ namespace TimeManagement
             InitializeComponent();
         }
 
-
+        private void ForgotPass_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ForgotPass forgot = new ForgotPass();
+            forgot.Show();
+        }
     }
 }

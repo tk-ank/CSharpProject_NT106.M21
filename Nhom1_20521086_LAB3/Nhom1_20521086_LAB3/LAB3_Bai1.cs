@@ -12,11 +12,33 @@ namespace Nhom1_20521086_LAB3
 {
     public partial class LAB3_Bai1 : Form
     {
+        LAB3_Bai1_Client client = new LAB3_Bai1_Client();
+        LAB3_Bai1_Server server = new LAB3_Bai1_Server();
+
         public LAB3_Bai1()
         {
             InitializeComponent();
         }
 
+        private void btnServer_Click(object sender, EventArgs e)
+        {
+            server.Show();
+            btnServer.Enabled = false;
+        }
 
+        private void btnClient_Click(object sender, EventArgs e)
+        {            
+            client.Show();
+            btnClient.Enabled = false;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            client.Close();
+            server.Close();
+            Main main = new Main();
+            main.Show();
+        }
     }
 }
