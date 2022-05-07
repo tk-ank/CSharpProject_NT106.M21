@@ -33,3 +33,5 @@ C:\Users\kyanh\Desktop\TimeManagement\TimeManagement\obj\Debug\TimeManagement.Ve
 C:\Users\kyanh\Desktop\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.GenerateResource.cache
 C:\Users\kyanh\Desktop\TimeManagement\TimeManagement\obj\Debug\TimeManagement.csproj.CoreCompileInputs.cache
 C:\Users\kyanh\Desktop\TimeManagement\TimeManagement\obj\Debug\TimeManagement.demo.resources
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.exe
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\CSharpProject_NT106.M21\TimeManagement\TimeManagement\obj\Debug\TimeManagement.pdb
