@@ -1,0 +1,6 @@
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\ChessProject\Chess\obj\Debug\Chess.csproj.AssemblyReference.cache
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\ChessProject\Chess\obj\Debug\Chess.csproj.SuggestedBindingRedirects.cache
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\ChessProject\Chess\obj\Debug\Chess.PawnPromotion.resources
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\ChessProject\Chess\obj\Debug\Chess.Properties.Resources.resources
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\ChessProject\Chess\obj\Debug\Chess.csproj.GenerateResource.cache
+D:\Tài liệu\Lập trình Mạng căn bản\THỰC HÀNH\CSharpProject_NT106.M21\ChessProject\Chess\obj\Debug\Chess.csproj.CoreCompileInputs.cache
