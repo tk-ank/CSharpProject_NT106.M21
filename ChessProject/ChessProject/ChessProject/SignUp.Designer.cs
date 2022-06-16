@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.Title = new System.Windows.Forms.Label();
             this.pnTitle = new System.Windows.Forms.Panel();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.cbFemale = new System.Windows.Forms.CheckBox();
             this.cbMale = new System.Windows.Forms.CheckBox();
-            this.tbPassWord = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbConfirm = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.Label();
@@ -42,8 +43,8 @@
             this.Password = new System.Windows.Forms.Label();
             this.Username = new System.Windows.Forms.Label();
             this.PNSignUp = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.pnTitle.SuspendLayout();
             this.PNSignUp.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,7 @@
             // 
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmail.Location = new System.Drawing.Point(200, 125);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Multiline = true;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(325, 27);
@@ -84,7 +85,7 @@
             this.cbFemale.AutoSize = true;
             this.cbFemale.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFemale.Location = new System.Drawing.Point(375, 75);
-            this.cbFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFemale.Margin = new System.Windows.Forms.Padding(2);
             this.cbFemale.Name = "cbFemale";
             this.cbFemale.Size = new System.Drawing.Size(56, 29);
             this.cbFemale.TabIndex = 24;
@@ -96,28 +97,28 @@
             this.cbMale.AutoSize = true;
             this.cbMale.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMale.Location = new System.Drawing.Point(200, 75);
-            this.cbMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbMale.Margin = new System.Windows.Forms.Padding(2);
             this.cbMale.Name = "cbMale";
             this.cbMale.Size = new System.Drawing.Size(71, 29);
             this.cbMale.TabIndex = 23;
             this.cbMale.Text = "Nam";
             this.cbMale.UseVisualStyleBackColor = true;
             // 
-            // tbPassWord
+            // tbPassword
             // 
-            this.tbPassWord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbPassWord.Location = new System.Drawing.Point(200, 175);
-            this.tbPassWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbPassWord.Multiline = true;
-            this.tbPassWord.Name = "tbPassWord";
-            this.tbPassWord.Size = new System.Drawing.Size(325, 27);
-            this.tbPassWord.TabIndex = 21;
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPassword.Location = new System.Drawing.Point(200, 175);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPassword.Multiline = true;
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(325, 27);
+            this.tbPassword.TabIndex = 21;
             // 
             // tbUsername
             // 
             this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbUsername.Location = new System.Drawing.Point(200, 25);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsername.Multiline = true;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(325, 27);
@@ -127,7 +128,7 @@
             // 
             this.tbConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbConfirm.Location = new System.Drawing.Point(200, 225);
-            this.tbConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.tbConfirm.Multiline = true;
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.Size = new System.Drawing.Size(325, 27);
@@ -196,11 +197,11 @@
             // PNSignUp
             // 
             this.PNSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(230)))));
-            this.PNSignUp.Controls.Add(this.btnExit);
+            this.PNSignUp.Controls.Add(this.btnCancel);
             this.PNSignUp.Controls.Add(this.tbEmail);
             this.PNSignUp.Controls.Add(this.cbFemale);
             this.PNSignUp.Controls.Add(this.cbMale);
-            this.PNSignUp.Controls.Add(this.tbPassWord);
+            this.PNSignUp.Controls.Add(this.tbPassword);
             this.PNSignUp.Controls.Add(this.tbUsername);
             this.PNSignUp.Controls.Add(this.tbConfirm);
             this.PNSignUp.Controls.Add(this.btnSignUp);
@@ -210,10 +211,21 @@
             this.PNSignUp.Controls.Add(this.Password);
             this.PNSignUp.Controls.Add(this.Username);
             this.PNSignUp.Location = new System.Drawing.Point(0, 75);
-            this.PNSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PNSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.PNSignUp.Name = "PNSignUp";
             this.PNSignUp.Size = new System.Drawing.Size(550, 325);
             this.PNSignUp.TabIndex = 5;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(250, 265);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(125, 35);
+            this.btnCancel.TabIndex = 27;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSignUp
             // 
@@ -221,23 +233,13 @@
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(400, 265);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(125, 35);
             this.btnSignUp.TabIndex = 18;
             this.btnSignUp.Text = "Đăng Ký";
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(250, 265);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(125, 35);
-            this.btnExit.TabIndex = 27;
-            this.btnExit.Text = "Hủy";
-            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // SignUp
             // 
@@ -248,8 +250,10 @@
             this.Controls.Add(this.pnTitle);
             this.Controls.Add(this.PNSignUp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUp";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();
@@ -266,7 +270,7 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.CheckBox cbFemale;
         private System.Windows.Forms.CheckBox cbMale;
-        private System.Windows.Forms.TextBox tbPassWord;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox tbConfirm;
         private System.Windows.Forms.Label Email;
@@ -276,6 +280,6 @@
         private System.Windows.Forms.Label Username;
         private System.Windows.Forms.Panel PNSignUp;
         private System.Windows.Forms.Button btnSignUp;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

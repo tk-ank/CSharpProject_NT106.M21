@@ -17,33 +17,24 @@ namespace ChessProject
             InitializeComponent();
         }
 
-        private async void btnSignUp_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (tbUsername.TextLength == 0 || tbPassWord.TextLength == 0 ||
-                tbEmail.TextLength == 0 || tbPassWord.Text != tbConfirm.Text|| 
+            if (tbUsername.TextLength == 0 || tbPassword.TextLength == 0 ||
+                tbEmail.TextLength == 0 || tbPassword.Text != tbConfirm.Text ||
                 (!cbMale.Checked && !cbFemale.Checked))
             {
                 return;
             }
-            string sendString = tbUsername.Text + ' ' + tbPassWord.Text + ' ' + tbEmail.Text;
-            List<byte> fullPackage = new List<byte>();
-            fullPackage.Add(0);
-            fullPackage.Add(6);
-            fullPackage.AddRange(Encoding.UTF8.GetBytes(sendString));
-            Login.clientSocket.Send(fullPackage.ToArray());
+            //string sendString = tbUsername.Text + ' ' + tbPassword.Text + ' ' + tbEmail.Text;
+            
+            ServerConnect.Send(tbUsername.Text, tbPassword.Text, tbEmail.Text, 0, 6);
+            ServerConnect.WaitForData();
 
-            byte[] recvBytes = new byte[1];
 
-            await Task.Run(() =>
-            {
-                //trycatch
-                Login.clientSocket.Receive(recvBytes, 0, 1, System.Net.Sockets.SocketFlags.None);
-            });
-
-            if (recvBytes[0] == 1)
+            if (ServerConnect.recvBytes[0] == 1)
             {
                 MessageBox.Show("Đăng ký thành công!");
-                Form login = new Login();
+                Form login = new SignIn();
                 this.Hide();
                 login.Show();
             }
@@ -53,6 +44,13 @@ namespace ChessProject
                 return;
             }
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Form si = new SignIn();
+            this.Hide();
+            si.Show();
         }
     }
 }

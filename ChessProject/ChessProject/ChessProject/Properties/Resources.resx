@@ -118,26 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-book-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-book-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1st" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1st.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-home-50 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-home-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3rd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3rd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-book-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-book-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-chess-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-chess-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="title" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\title.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bc8ae4f33642f61caf531" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bc8ae4f33642f61caf53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bc8ae4f33642f61caf53" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bc8ae4f33642f61caf53.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bc8ae4f33642f61caf531" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bc8ae4f33642f61caf53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2nd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2nd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,13 +151,16 @@
   <data name="bc8ae4f33642f61caf53-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bc8ae4f33642f61caf53-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3rd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3rd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-battle-50 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-battle-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-user-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-user-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-chess-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-chess-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="284515049_446015590687536_464088055087704388_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\284515049_446015590687536_464088055087704388_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

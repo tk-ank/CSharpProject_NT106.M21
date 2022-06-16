@@ -46,53 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangePass.cs">
+    <Compile Include="Menu Feature\ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePass.Designer.cs">
+    <Compile Include="Menu Feature\ChangePass.Designer.cs">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connect.cs">
+    <Compile Include="ServerConnect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connect.Designer.cs">
-      <DependentUpon>Connect.cs</DependentUpon>
+    <Compile Include="ServerConnect.Designer.cs">
+      <DependentUpon>ServerConnect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Infor.cs">
+    <Compile Include="Menu Feature\Infor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Infor.Designer.cs">
+    <Compile Include="Menu Feature\Infor.Designer.cs">
       <DependentUpon>Infor.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayGame.cs">
+    <Compile Include="Play\PlayGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayGame.Designer.cs">
+    <Compile Include="Play\PlayGame.Designer.cs">
       <DependentUpon>PlayGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="SinglePlay.cs">
+    <Compile Include="Play\SinglePlay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SinglePlay.Designer.cs">
+    <Compile Include="Play\SinglePlay.Designer.cs">
       <DependentUpon>SinglePlay.cs</DependentUpon>
     </Compile>
-    <Compile Include="ForgotPass.cs">
+    <Compile Include="ForgotPassword\ForgotPass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPass.Designer.cs">
+    <Compile Include="ForgotPassword\ForgotPass.Designer.cs">
       <DependentUpon>ForgotPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Menu Feature\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Menu Feature\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -107,22 +107,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Ranking.cs">
+    <Compile Include="Menu Feature\Ranking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ranking.Designer.cs">
+    <Compile Include="Menu Feature\Ranking.Designer.cs">
       <DependentUpon>Ranking.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResetPass.cs">
+    <Compile Include="ForgotPassword\ResetPass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResetPass.Designer.cs">
+    <Compile Include="ForgotPassword\ResetPass.Designer.cs">
       <DependentUpon>ResetPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayChess.cs">
+    <Compile Include="Play\PlayChess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayChess.Designer.cs">
+    <Compile Include="Play\PlayChess.Designer.cs">
       <DependentUpon>PlayChess.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUp.cs">
@@ -131,35 +131,35 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerifyForm.cs">
+    <Compile Include="ForgotPassword\VerifyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerifyForm.Designer.cs">
+    <Compile Include="ForgotPassword\VerifyForm.Designer.cs">
       <DependentUpon>VerifyForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChangePass.resx">
+    <EmbeddedResource Include="Menu Feature\ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Connect.resx">
-      <DependentUpon>Connect.cs</DependentUpon>
+    <EmbeddedResource Include="ServerConnect.resx">
+      <DependentUpon>ServerConnect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Infor.resx">
+    <EmbeddedResource Include="Menu Feature\Infor.resx">
       <DependentUpon>Infor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayGame.resx">
+    <EmbeddedResource Include="Play\PlayGame.resx">
       <DependentUpon>PlayGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SinglePlay.resx">
+    <EmbeddedResource Include="Play\SinglePlay.resx">
       <DependentUpon>SinglePlay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgotPass.resx">
+    <EmbeddedResource Include="ForgotPassword\ForgotPass.resx">
       <DependentUpon>ForgotPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Menu Feature\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -169,19 +169,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ranking.resx">
+    <EmbeddedResource Include="Menu Feature\Ranking.resx">
       <DependentUpon>Ranking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResetPass.resx">
+    <EmbeddedResource Include="ForgotPassword\ResetPass.resx">
       <DependentUpon>ResetPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayChess.resx">
+    <EmbeddedResource Include="Play\PlayChess.resx">
       <DependentUpon>PlayChess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerifyForm.resx">
+    <EmbeddedResource Include="ForgotPassword\VerifyForm.resx">
       <DependentUpon>VerifyForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -238,6 +238,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-chess-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\284515049_446015590687536_464088055087704388_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chess\Chess.csproj">
+      <Project>{1ce4bb3d-7f5d-4308-8875-3e9eefd67647}</Project>
+      <Name>Chess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

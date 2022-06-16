@@ -65,7 +65,7 @@
             this.pnLogout.Controls.Add(this.pictureBox1);
             this.pnLogout.Controls.Add(this.btnLogout);
             this.pnLogout.Location = new System.Drawing.Point(0, 550);
-            this.pnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.pnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnLogout.Name = "pnLogout";
             this.pnLogout.Size = new System.Drawing.Size(325, 75);
             this.pnLogout.TabIndex = 5;
@@ -75,7 +75,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLogout.Location = new System.Drawing.Point(75, 0);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(250, 75);
             this.btnLogout.TabIndex = 0;
@@ -97,13 +97,14 @@
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pnRank
             // 
             this.pnRank.Controls.Add(this.pbRank);
             this.pnRank.Controls.Add(this.btnRank);
             this.pnRank.Location = new System.Drawing.Point(0, 475);
-            this.pnRank.Margin = new System.Windows.Forms.Padding(2);
+            this.pnRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnRank.Name = "pnRank";
             this.pnRank.Size = new System.Drawing.Size(325, 75);
             this.pnRank.TabIndex = 3;
@@ -113,7 +114,7 @@
             this.pbRank.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbRank.BackgroundImage")));
             this.pbRank.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbRank.Location = new System.Drawing.Point(25, 25);
-            this.pbRank.Margin = new System.Windows.Forms.Padding(2);
+            this.pbRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbRank.Name = "pbRank";
             this.pbRank.Size = new System.Drawing.Size(25, 25);
             this.pbRank.TabIndex = 1;
@@ -127,7 +128,7 @@
             this.btnRank.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnRank.Location = new System.Drawing.Point(75, 0);
-            this.btnRank.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRank.Name = "btnRank";
             this.btnRank.Size = new System.Drawing.Size(250, 75);
             this.btnRank.TabIndex = 0;
@@ -147,7 +148,7 @@
             this.pnMenu.Controls.Add(this.pnUser);
             this.pnMenu.Controls.Add(this.pnHome);
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(325, 800);
             this.pnMenu.TabIndex = 4;
@@ -170,7 +171,7 @@
             this.pnPlay.Controls.Add(this.pbPlay);
             this.pnPlay.Controls.Add(this.btnPlay);
             this.pnPlay.Location = new System.Drawing.Point(0, 400);
-            this.pnPlay.Margin = new System.Windows.Forms.Padding(2);
+            this.pnPlay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnPlay.Name = "pnPlay";
             this.pnPlay.Size = new System.Drawing.Size(325, 75);
             this.pnPlay.TabIndex = 2;
@@ -180,7 +181,7 @@
             this.pbPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbPlay.BackgroundImage")));
             this.pbPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbPlay.Location = new System.Drawing.Point(25, 25);
-            this.pbPlay.Margin = new System.Windows.Forms.Padding(2);
+            this.pbPlay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbPlay.Name = "pbPlay";
             this.pbPlay.Size = new System.Drawing.Size(25, 25);
             this.pbPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +196,7 @@
             this.btnPlay.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPlay.Location = new System.Drawing.Point(75, 0);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(250, 75);
             this.btnPlay.TabIndex = 0;
@@ -203,13 +204,14 @@
             this.btnPlay.Text = "Thi đấu";
             this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // pnUser
             // 
             this.pnUser.Controls.Add(this.pbUser);
             this.pnUser.Controls.Add(this.btnInfor);
             this.pnUser.Location = new System.Drawing.Point(0, 325);
-            this.pnUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pnUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnUser.Name = "pnUser";
             this.pnUser.Size = new System.Drawing.Size(325, 75);
             this.pnUser.TabIndex = 1;
@@ -219,7 +221,7 @@
             this.pbUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbUser.BackgroundImage")));
             this.pbUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbUser.Location = new System.Drawing.Point(25, 25);
-            this.pbUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pbUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(25, 25);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +236,7 @@
             this.btnInfor.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInfor.Location = new System.Drawing.Point(75, 0);
-            this.btnInfor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInfor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInfor.Name = "btnInfor";
             this.btnInfor.Size = new System.Drawing.Size(250, 75);
             this.btnInfor.TabIndex = 0;
@@ -249,7 +251,7 @@
             this.pnHome.Controls.Add(this.HomePic);
             this.pnHome.Controls.Add(this.btnHome);
             this.pnHome.Location = new System.Drawing.Point(0, 250);
-            this.pnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.pnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnHome.Name = "pnHome";
             this.pnHome.Size = new System.Drawing.Size(325, 75);
             this.pnHome.TabIndex = 0;
@@ -259,7 +261,7 @@
             this.HomePic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomePic.BackgroundImage")));
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomePic.Location = new System.Drawing.Point(25, 25);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(2);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HomePic.Name = "HomePic";
             this.HomePic.Size = new System.Drawing.Size(25, 25);
             this.HomePic.TabIndex = 1;
@@ -273,7 +275,7 @@
             this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnHome.Location = new System.Drawing.Point(75, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(250, 75);
             this.btnHome.TabIndex = 0;
@@ -288,7 +290,7 @@
             this.pnContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(214)))), ((int)(((byte)(210)))));
             this.pnContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnContent.Location = new System.Drawing.Point(325, 0);
-            this.pnContent.Margin = new System.Windows.Forms.Padding(2);
+            this.pnContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnContent.Name = "pnContent";
             this.pnContent.Size = new System.Drawing.Size(875, 800);
             this.pnContent.TabIndex = 5;

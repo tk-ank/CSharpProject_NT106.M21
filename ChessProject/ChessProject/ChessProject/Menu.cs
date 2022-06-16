@@ -21,8 +21,6 @@ namespace ChessProject
         }
         
         
-        
-
         private void btnHome_Click(object sender, EventArgs e)
         { 
             pnContent.Controls.Clear();
@@ -50,7 +48,15 @@ namespace ChessProject
 
         private void btnInfor_Click(object sender, EventArgs e)
         {
-            
+            pnContent.Controls.Clear();
+            Infor ThongTin = new Infor()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            this.pnContent.Controls.Add(ThongTin);
+            ThongTin.Show();
         }
 
         private void btnRank_Click(object sender, EventArgs e)
@@ -64,6 +70,29 @@ namespace ChessProject
             };
             this.pnContent.Controls.Add(BXH);
             BXH.Show();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            pnContent.Controls.Clear();
+            PlayGame playGame = new PlayGame()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            this.pnContent.Controls.Add(playGame);
+            playGame.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+                SignIn signin = new SignIn();
+                signin.Show();
+            }
         }
     }
 }

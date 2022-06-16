@@ -11,7 +11,8 @@ namespace Chess
     {
         #region Các thuộc tính của class
 
-        private ChessPiece[,] boardArray;
+        public ChessPiece[,] boardArray;
+        
         private const int COLUMNS = 8;
         private int ROWS = 8;
 
@@ -38,6 +39,7 @@ namespace Chess
         public ChessPiece this[int x, int y]
         {
             get { return boardArray[x, y]; }
+            set { boardArray[x, y] = value; }
         }
         #endregion
         private ChessBoard SetupBoard()
@@ -329,7 +331,35 @@ namespace Chess
                             }
                             else
                             {
-                                PawnPromotion promoteForm = new PawnPromotion();
+                                PawnPromotion promoteForm = new PawnPromotion(pawn.Player);
+
+
+                                while (promoteForm.PromotedPiece == null)
+                                {
+                                    if (promoteForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        break;
+                                    }
+                                }
+                                switch (promoteForm.PromotedPiece.ToString())
+                                {
+                                    case "Chess.Knight":
+                                        PromotionValue = 0;
+                                        break;
+                                    case "Chess.Bishop":
+                                        PromotionValue = 1;
+                                        break;
+                                    case "Chess.Rook":
+                                        PromotionValue = 2;
+                                        break;
+                                    case "Chess.Queen":
+                                        PromotionValue = 3;
+                                        break;
+                                    default:
+                                        MessageBox.Show("Wrong promotion piece");
+                                        break;
+                                }
+                                movingPiece = promoteForm.PromotedPiece;
                             }
                             movingPiece.Player = pawn.Player;
                         }
