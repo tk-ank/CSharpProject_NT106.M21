@@ -89,6 +89,7 @@ namespace ChessProject
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                ServerConnect.username = "";
                 this.Close();
                 SignIn signin = new SignIn();
                 signin.Show();

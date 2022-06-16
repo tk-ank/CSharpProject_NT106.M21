@@ -83,18 +83,7 @@ namespace Server
         }
         private void recvCallBack(IAsyncResult AR)
         {
-            //try
-            //{
-            //    if (recvSock.EndReceive(AR) <= 1)
-            //    {
-            //        MessageBox.Show("Some client disconnected");
-            //        return;
-            //    }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("exception ");
-            //}
+            
             recvBytes = new byte[BitConverter.ToInt32(recvBuffer,0)];
             recvSock.Receive(recvBytes, 0, recvBytes.Length, SocketFlags.None);
 
@@ -189,6 +178,13 @@ namespace Server
                     flag = true;
                     break;
                 case 0:
+                    stringData = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
+                    stringArr = stringData.Split(' ');
+                    if (changePass(stringArr[0], stringArr[1], stringArr[2]))
+                        Send(1);
+                    else
+                        Send(0);
+
                     break;
             }
 

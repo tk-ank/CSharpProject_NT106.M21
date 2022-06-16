@@ -67,6 +67,7 @@
             btnChangePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             btnChangePass.UseCompatibleTextRendering = true;
             btnChangePass.UseVisualStyleBackColor = false;
+            btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // pictureBox1
             // 

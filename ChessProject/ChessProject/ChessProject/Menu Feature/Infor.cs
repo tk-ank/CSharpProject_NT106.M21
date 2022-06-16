@@ -36,5 +36,12 @@ namespace ChessProject
                 return;
             }
         }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            ChangePass cp = new ChangePass();
+            this.Close();
+            cp.Show();
+        }
     }
 }
