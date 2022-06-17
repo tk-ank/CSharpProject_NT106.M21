@@ -46,12 +46,14 @@ namespace Server
         //Nhập user của sqlexpress trên máy local host, đảm bảo là  "\" thành "\\"
         private void btnListen_Click(object sender, EventArgs e)
         {
-            if (tbLocalName.TextLength == 0 || tbPassword.TextLength == 0)
-            {
-                return;
-            }
+            //if (tbLocalName.TextLength == 0 || tbPassword.TextLength == 0)
+            //{
+            //    return;
+            //}
 
-            conn = ("Data Source=" + tbLocalName.Text + ";Initial Catalog=QLCOVUA;User id=sa;password=" + tbPassword.Text + ";");
+            //String SQLuser = tbLocalName.Text.Replace(@"\","\\");
+            //conn = ("Data Source=" + SQLuser + ";Initial Catalog=QLCOVUA;User id=sa;password=" + tbPassword.Text + ";");
+            conn = ("Data Source=TRANGKYANH;Initial Catalog=QLCOVUA;User id=sa;password=sa;");
 
             try
             {
@@ -286,12 +288,11 @@ namespace Server
         }
 
         //02
-        
+
 
         //03
         private bool NewPass(string username, string newPass)
         {
-
             SqlConnection con = new SqlConnection(conn);
             con.Open();
 
@@ -306,15 +307,11 @@ namespace Server
             if (row == 0)
                 return false;
             return true;
-
-
         }
 
         //04
         private bool SignIn(string username, string pass)
         {
-
-
             string sql = "SELECT TENND FROM NGUOIDUNG WHERE TENND=@ten AND MATKHAU=@mk ";
             SqlConnection con = new SqlConnection(conn);
             con.Open();
@@ -340,7 +337,6 @@ namespace Server
             //msg[0]: username, msg[1]:pass, msg[2]:email
             if (checkSignUp(msg[0], msg[2]) == false)
             {
-
                 string sql = "INSERT INTO NGUOIDUNG(TENND,MATKHAU,EMAIL,DIEM) VALUES (@ten,@mk,@mail,0)";
                 SqlConnection con = new SqlConnection(conn);
                 con.Open();
@@ -363,8 +359,6 @@ namespace Server
         //07
         private string[] Rank(string username)
         {
-
-
             string sql = "SELECT TOP 3 DIEM, TENND FROM NGUOIDUNG ORDER BY DIEM DESC ";
             SqlConnection con = new SqlConnection(conn);
             con.Open();
@@ -445,9 +439,26 @@ namespace Server
         }
 
         //10
-        private void Chat()
+        private bool changePass(string username, string oldPass, string newPass)
         {
+            if (SignIn(username, oldPass) == true)
+            {
+                SqlConnection con = new SqlConnection(conn);
+                con.Open();
 
+                string sql = "UPDATE NGUOIDUNG SET MATKHAU = @mk WHERE TENND = @ten";
+                SqlCommand sc = new SqlCommand(sql, con);
+                sc.Parameters.AddWithValue("@ten", username);
+                sc.Parameters.AddWithValue("@mk", newPass);
+                int row = sc.ExecuteNonQuery();
+
+                con.Dispose();
+                sc.Dispose();
+                if (row == 0)
+                    return false;
+                return true;
+            }
+            return false;
         }
 
         //11
@@ -583,8 +594,11 @@ namespace Server
             int win = getBattleWinCount(username);
             int draw = getBattleDrawCount(username);
             int battle = getBattleCount(username);
-
-            double rate = (win + draw * 0.5) * 100.0 / battle;
+            double rate;
+            if (battle == 0)
+                rate = 0.0;
+            else
+                rate = (win + draw * 0.5) * 100.0 / battle;
             rate = Math.Round(rate, 1);
             return rate;
         }
@@ -782,29 +796,4 @@ namespace Server
 }
 
 
-//public static void startReceiving()
-//{
-//    recvBuffer = new byte[4];
-//    clientSocket.BeginReceive(recvBuffer, 0, recvBuffer.Length, SocketFlags.None, recvCallBack, clientSocket);
-//}
-//public static void recvCallBack(IAsyncResult ar)
-//{
-//    if (clientSocket.EndReceive(ar) <= 1)
-//    {
-//        return;
-//    }
-//    //= new byte[BitConverter.ToInt32(_buffer, 0)]; 
-//    recvBytes = new byte[BitConverter.ToInt32(recvBuffer, 0)];
-//    clientSocket.Receive(recvBytes, 0, recvBytes.Length, SocketFlags.None);
-//    Received = true;
-//}
-//private void btnConnect_Click(object sender, EventArgs e)
-//{
-//    if (!TryToConnect(clientSocket))
-//        return;
-//    btnConnect.Enabled = false;
-//    MessageBox.Show("Kết nối tới server thành công");
-//    Form si = new SignIn();
-//    this.Hide();
-//    si.Show();
-//}
+
