@@ -160,3 +160,35 @@ D:\ChessProject\ChessProject\Server\obj\Debug\Server.Server.resources
 D:\ChessProject\ChessProject\Server\obj\Debug\Server.csproj.GenerateResource.cache
 D:\ChessProject\ChessProject\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 D:\ChessProject\ChessProject\Server\obj\Debug\Server.csproj.CopyComplete
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\Server.exe.config
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\Server.exe
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\Server.pdb
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\BouncyCastle.Crypto.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\MailKit.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\MimeKit.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Buffers.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Data.SqlClient.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Memory.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Numerics.Vectors.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Text.Encoding.CodePages.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\BouncyCastle.Crypto.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\MailKit.pdb
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\MailKit.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\MimeKit.pdb
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\MimeKit.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Buffers.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Data.SqlClient.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Memory.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Numerics.Vectors.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.Properties.Resources.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.Server.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.csproj.CopyComplete
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.exe
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\Server\obj\Debug\Server.pdb

@@ -124,3 +124,29 @@ D:\ChessProject\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.Ve
 D:\ChessProject\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csproj.GenerateResource.cache
 D:\ChessProject\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csproj.CoreCompileInputs.cache
 D:\ChessProject\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csproj.CopyComplete
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\bin\Debug\ChessProject.exe.config
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\bin\Debug\ChessProject.exe
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\bin\Debug\ChessProject.pdb
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\bin\Debug\Chess.dll
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\bin\Debug\Chess.pdb
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csprojAssemblyReference.cache
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.ChangePass.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.ServerConnect.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.Infor.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.PlayGame.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.SinglePlay.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.ForgotPass.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.Home.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.SignIn.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.Menu.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.Properties.Resources.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.Ranking.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.ResetPass.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.PlayChess.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.SignUp.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.VerifyForm.resources
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csproj.GenerateResource.cache
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csproj.CoreCompileInputs.cache
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\MainApp.csproj.CopyComplete
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.exe
+D:\CODING\Lập trình mạng C#\CSharpProject_NT106.M21\ChessProject\ChessProject\ChessProject\obj\Debug\ChessProject.pdb

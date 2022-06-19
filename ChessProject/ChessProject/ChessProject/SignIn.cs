@@ -45,7 +45,12 @@ namespace ChessProject
                 return;
             }
 
-            string sendString = tbAccount.Text + " " + tbPassword.Text;
+            RSA rsa = new RSA();
+            byte[] pass = Encoding.ASCII.GetBytes(tbPassword.Text);
+            byte[] encryptedpass = rsa.encrypt(pass);
+            string encryptedpassString = Convert.ToBase64String(encryptedpass);
+
+            string sendString = tbAccount.Text + " " + encryptedpassString;
 
             ServerConnect.Send(sendString, 0, 4);
             ServerConnect.WaitForData();

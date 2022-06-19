@@ -542,8 +542,11 @@ namespace Server
             int win = getBattleWinCount(username);
             int draw = getBattleDrawCount(username);
             int battle = getBattleCount(username);
-
-            double rate = (win + draw * 0.5) * 100.0 / battle;
+            double rate;
+            if (battle == 0)
+                rate = 0.0;
+            else
+                rate = (win + draw * 0.5) * 100.0 / battle;
             rate = Math.Round(rate, 1);
             return rate;
         }

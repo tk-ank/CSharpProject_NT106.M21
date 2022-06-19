@@ -42,10 +42,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(243, 204);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(273, 255);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(133, 43);
+            this.btnCancel.Size = new System.Drawing.Size(150, 54);
             this.btnCancel.TabIndex = 43;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -56,10 +56,10 @@
             this.bntSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(68)))), ((int)(((byte)(66)))));
             this.bntSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.bntSave.Location = new System.Drawing.Point(407, 204);
-            this.bntSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bntSave.Location = new System.Drawing.Point(458, 255);
+            this.bntSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bntSave.Name = "bntSave";
-            this.bntSave.Size = new System.Drawing.Size(133, 43);
+            this.bntSave.Size = new System.Drawing.Size(150, 54);
             this.bntSave.TabIndex = 42;
             this.bntSave.Text = "Lưu";
             this.bntSave.UseVisualStyleBackColor = false;
@@ -70,9 +70,9 @@
             this.lbOldPass.AutoSize = true;
             this.lbOldPass.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOldPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.lbOldPass.Location = new System.Drawing.Point(27, 28);
+            this.lbOldPass.Location = new System.Drawing.Point(30, 35);
             this.lbOldPass.Name = "lbOldPass";
-            this.lbOldPass.Size = new System.Drawing.Size(124, 25);
+            this.lbOldPass.Size = new System.Drawing.Size(147, 31);
             this.lbOldPass.TabIndex = 41;
             this.lbOldPass.Text = "Mật khẩu cũ:";
             // 
@@ -80,10 +80,11 @@
             // 
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(227, 28);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPassword.Location = new System.Drawing.Point(255, 35);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(313, 36);
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(352, 41);
             this.tbPassword.TabIndex = 40;
             // 
             // label1
@@ -91,9 +92,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(27, 151);
+            this.label1.Location = new System.Drawing.Point(30, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.Size = new System.Drawing.Size(209, 31);
             this.label1.TabIndex = 39;
             this.label1.Text = "Nhập lại mật khẩu:";
             // 
@@ -102,9 +103,9 @@
             this.lbNewPass.AutoSize = true;
             this.lbNewPass.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNewPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.lbNewPass.Location = new System.Drawing.Point(27, 90);
+            this.lbNewPass.Location = new System.Drawing.Point(30, 112);
             this.lbNewPass.Name = "lbNewPass";
-            this.lbNewPass.Size = new System.Drawing.Size(138, 25);
+            this.lbNewPass.Size = new System.Drawing.Size(163, 31);
             this.lbNewPass.TabIndex = 38;
             this.lbNewPass.Text = "Mật khẩu mới:";
             // 
@@ -112,28 +113,30 @@
             // 
             this.tbConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbConfirm.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbConfirm.Location = new System.Drawing.Point(227, 151);
-            this.tbConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbConfirm.Location = new System.Drawing.Point(255, 189);
+            this.tbConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbConfirm.Name = "tbConfirm";
-            this.tbConfirm.Size = new System.Drawing.Size(313, 36);
+            this.tbConfirm.PasswordChar = '*';
+            this.tbConfirm.Size = new System.Drawing.Size(352, 41);
             this.tbConfirm.TabIndex = 37;
             // 
             // tbNewPass
             // 
             this.tbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNewPass.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNewPass.Location = new System.Drawing.Point(227, 90);
-            this.tbNewPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNewPass.Location = new System.Drawing.Point(255, 112);
+            this.tbNewPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNewPass.Name = "tbNewPass";
-            this.tbNewPass.Size = new System.Drawing.Size(313, 36);
+            this.tbNewPass.PasswordChar = '*';
+            this.tbNewPass.Size = new System.Drawing.Size(352, 41);
             this.tbNewPass.TabIndex = 36;
             // 
             // ChangePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(567, 277);
+            this.ClientSize = new System.Drawing.Size(638, 346);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.bntSave);
             this.Controls.Add(this.lbOldPass);
@@ -144,7 +147,7 @@
             this.Controls.Add(this.tbNewPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChangePass";
             this.Text = "ChangePass";
             this.ResumeLayout(false);
