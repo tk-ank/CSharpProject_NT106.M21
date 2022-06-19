@@ -33,27 +33,22 @@ namespace Server
 
         #region NHẬN, GỬI DỮ LIỆU ĐI
 
-        
+
 
         byte[] recvBuffer = new byte[4];
         byte[] recvBytes;
-        public static Socket listenSock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        public Socket listenSock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         public static Socket recvSock;
-        string conn;
+        public static string conn;
 
-        //"DESKTOP-AG3SDR7\SQLEXPRESS" .replace(\,\\)
-        //"123321"
-        //Nhập user của sqlexpress trên máy local host, đảm bảo là  "\" thành "\\"
         private void btnListen_Click(object sender, EventArgs e)
         {
-            //if (tbLocalName.TextLength == 0 || tbPassword.TextLength == 0)
-            //{
-            //    return;
-            //}
+            if (tbLocalName.TextLength == 0 || tbPassword.TextLength == 0)
+            {
+                return;
+            }
 
-            //String SQLuser = tbLocalName.Text.Replace(@"\","\\");
-            //conn = ("Data Source=" + SQLuser + ";Initial Catalog=QLCOVUA;User id=sa;password=" + tbPassword.Text + ";");
-            conn = ("Data Source=TRANGKYANH;Initial Catalog=QLCOVUA;User id=sa;password=sa;");
+            conn = ("Data Source=" + tbLocalName.Text + ";Initial Catalog=QLCOVUA;User id=sa;password=" + tbPassword.Text + ";");
 
             try
             {
@@ -69,183 +64,98 @@ namespace Server
 
             MessageBox.Show("Kết nối cơ sở dữ liệu thành công!");
 
-            listenSock.Bind(new IPEndPoint(IPAddress.Any, 1234));
-            listenSock.Listen(10);
-            listenSock.BeginAccept(listenCallBack, listenSock);
+            Listener listener = new Listener();
+            listener.StartListening();
 
             btnListen.Enabled = false;
         }
-        private void listenCallBack(IAsyncResult ar)
+        class Listener
         {
-            recvBuffer = new byte[4];
-            recvSock = listenSock.EndAccept(ar);
-            recvSock.BeginReceive(recvBuffer, 0, recvBuffer.Length, SocketFlags.None, recvCallBack, recvSock);
+            public Socket ListenerSocket; //This is the socket that will listen to any incoming connections
+            public short Port = 1234; // on this port we will listen
 
-            listenSock.BeginAccept(listenCallBack, listenSock);
-        }
-        private void recvCallBack(IAsyncResult AR)
-        {
-            
-            recvBytes = new byte[BitConverter.ToInt32(recvBuffer,0)];
-            recvSock.Receive(recvBytes, 0, recvBytes.Length, SocketFlags.None);
-
-            string stringData = "";
-            string[] stringArr;
-
-            bool flag = false;
-            switch (recvBytes[1])
+            public Listener()
             {
-                case 1://ForgotPass - Gửi mail xác thực
-                    {
-                        string email = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
-                        string randomCode = RandomString(5, true);
-                        if (checkMail(email, randomCode))
-                        {
-                            stringData = username + " " + randomCode;
-                            Send(stringData, 1);
-                        }
-                        else
-                        {
-                            Send(0);
-                        }
-                        break;
-                    }
-                case 2://Xác thực ở máy, chưa dùng *** (Hàm bỏ trống)
-                    break;
-                case 3://ForgotPass - Đổi mật khẩu
-                    {
-                        stringData = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
-                        stringArr = stringData.Split(' ');
-                        if (NewPass(stringArr[0], stringArr[1]))
-                        {
-                            Send(1);
-                        }
-                        else
-                        {
-                            Send(0);
-                        }
-                        break;
-                    }
-                case 4://Đăng nhập 
-                    {
-                        stringData = Encoding.UTF8.GetString(recvBytes,2,recvBytes.Length-2);
-                        stringArr = stringData.Split(' ');
-                        if (SignIn(stringArr[0], stringArr[1]))
-                        {
-                            Send(1);
-                        }
-                        else
-                        {
-                            Send(0);
-                        }
-                        break;
-                    }
-                case 5:
-                    break;
-                case 6:
-                    {
-                        stringData = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
-                        stringArr = stringData.Split(' ');
-                        if (SignUp(stringArr))
-                        {
-                            Send(1);
-                        }
-                        else
-                        {
-                            Send(0);
-                        }
-                        break;
-                    }
-                case 7:
-                    {
-                        stringData = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
-                        string[] RankList = Rank(stringData);
-                        stringData = RankList[0] + ' ' + RankList[1] + ' '
-                                    + RankList[2] + ' ' + RankList[3] + ' '
-                                    + RankList[4] + ' ' + RankList[5] + ' '
-                                    + RankList[6] + ' ' + RankList[7] + ' ' + RankList[8];
-                        Send(stringData,1);
-                        break;
-                    }
-                case 8:
-                    {
-                        stringData = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
-                        stringArr = getInfo(stringData);
-                        stringData = stringArr[0] + " " + stringArr[1] + " " + stringArr[2] + " " + stringArr[3];
-                        Send(stringData,1);
-                        break;
-                    }
-                case 9:
-                    ManageClient.AddClient(recvSock);
-                    flag = true;
-                    break;
-                case 0:
-                    stringData = Encoding.UTF8.GetString(recvBytes, 2, recvBytes.Length - 2).Trim();
-                    stringArr = stringData.Split(' ');
-                    if (changePass(stringArr[0], stringArr[1], stringArr[2]))
-                        Send(1);
-                    else
-                        Send(0);
-
-                    break;
+                ListenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             }
+            public void StartListening()
+            {
+                try
+                {
+                    MessageBox.Show($"Listening started port:{Port} protocol type: {ProtocolType.Tcp}");
+                    ListenerSocket.Bind(new IPEndPoint(IPAddress.Any, Port));
+                    ListenerSocket.Listen(10);
+                    ListenerSocket.BeginAccept(AcceptCallback, ListenerSocket);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("listening error" + ex);
+                }
+            }
+            public void AcceptCallback(IAsyncResult ar)
+            {
+                try
+                {
+                    Console.WriteLine($"Accept CallBack port:{Port} protocol type: {ProtocolType.Tcp}");
+                    Socket acceptedSocket = ListenerSocket.EndAccept(ar);
+                    ManageClient.AddClient(acceptedSocket,Clients.Count);
 
-            recvBuffer = new byte[4];
-            
-            if (!flag)
-                recvSock.BeginReceive(recvBuffer, 0, recvBuffer.Length, SocketFlags.None, recvCallBack, recvSock);
-
+                    ListenerSocket.BeginAccept(AcceptCallback, ListenerSocket);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Base Accept error" + ex);
+                }
+            }
         }
-        public static void Send(byte[] data)
+        
+        #endregion
+
+        #region ByteManage
+
+        public static byte[] RemoveNumberOfFirstByte(byte[] _bytes, int num)
+        {
+            for (int i = 0; i < _bytes.Length - num; i++)
+                _bytes[i] = _bytes[i + num];
+            return _bytes;
+        }
+        
+        public static void Send(byte[] data, Socket s)
         {
             List<byte> fullPackage = new List<byte>();
             fullPackage.AddRange(BitConverter.GetBytes(data.Length));
             fullPackage.AddRange(data);
-            recvSock.Send(fullPackage.ToArray());
+            s.Send(fullPackage.ToArray());
         }
-        public static void Send(byte firstByte)
+       
+        public static void Send(byte firstByte, Socket s)
         {
             List<byte> fullPackage = new List<byte>();
             fullPackage.AddRange(BitConverter.GetBytes(1));
             fullPackage.Add(firstByte);
             //fullPackage.Add(secondByte);
-            recvSock.Send(fullPackage.ToArray());
+            s.Send(fullPackage.ToArray());
         }
-        public static void Send(string sendString, byte firstByte)
+        
+        public static void Send(string sendString, byte firstByte, Socket s)
         {
             List<byte> fullPackage = new List<byte>();
-            fullPackage.AddRange(BitConverter.GetBytes(sendString.Length+1));
+            fullPackage.AddRange(BitConverter.GetBytes(sendString.Length + 1));
             fullPackage.Add(firstByte);
             //fullPackage.Add(secondByte);
             fullPackage.AddRange(Encoding.UTF8.GetBytes(sendString));
-            recvSock.Send(fullPackage.ToArray());
+            s.Send(fullPackage.ToArray());
         }
-        public static void Send(string sendString1, string sendString2, byte firstByte)
-        {
-            List<byte> fullPackage = new List<byte>();
-            string sendString = sendString1 + " " + sendString2;
-            fullPackage.AddRange(BitConverter.GetBytes(sendString.Length+1));
-            fullPackage.Add(firstByte);
-            fullPackage.AddRange(Encoding.UTF8.GetBytes(sendString));
-            recvSock.Send(fullPackage.ToArray());
-        }
-        public static void Send(string sendString1, string sendString2, string sendString3, byte firstByte)
-        {
-            List<byte> fullPackage = new List<byte>();
-            string sendString = sendString1 + " " + sendString2 + " " + sendString3;
-            fullPackage.AddRange(BitConverter.GetBytes(sendString.Length+1));
-            fullPackage.Add(firstByte);
-            fullPackage.AddRange(Encoding.UTF8.GetBytes(sendString));
-            recvSock.Send(fullPackage.ToArray());
-        }
+        
+
 
         #endregion
 
         #region CÁC HÀM TRUY XUẤT SQL 
 
-        public string username = "";
+        public static string username = "";
         //01
-        private bool checkMail(string inputGmail, string code)
+        private static bool checkMail(string inputGmail, string code)
         {
             string sql = "SELECT TENND FROM NGUOIDUNG WHERE EMAIL=@mail ";
             SqlConnection con = new SqlConnection(conn);
@@ -286,13 +196,10 @@ namespace Server
 
             return kq;
         }
-
-        //02
-
-
         //03
-        private bool NewPass(string username, string newPass)
+        private static bool NewPass(string username, string newPass)
         {
+
             SqlConnection con = new SqlConnection(conn);
             con.Open();
 
@@ -307,11 +214,14 @@ namespace Server
             if (row == 0)
                 return false;
             return true;
-        }
 
+
+        }
         //04
-        private bool SignIn(string username, string pass)
+        private static bool SignIn(string username, string pass)
         {
+
+
             string sql = "SELECT TENND FROM NGUOIDUNG WHERE TENND=@ten AND MATKHAU=@mk ";
             SqlConnection con = new SqlConnection(conn);
             con.Open();
@@ -327,16 +237,13 @@ namespace Server
 
             return result;
         }
-
-        //05
-        
-
         //06
-        private bool SignUp(string[] msg)
+        private static bool SignUp(string[] msg)
         {
             //msg[0]: username, msg[1]:pass, msg[2]:email
             if (checkSignUp(msg[0], msg[2]) == false)
             {
+
                 string sql = "INSERT INTO NGUOIDUNG(TENND,MATKHAU,EMAIL,DIEM) VALUES (@ten,@mk,@mail,0)";
                 SqlConnection con = new SqlConnection(conn);
                 con.Open();
@@ -355,10 +262,11 @@ namespace Server
             }
             return false;
         }
-
         //07
-        private string[] Rank(string username)
+        private static string[] Rank(string username)
         {
+
+
             string sql = "SELECT TOP 3 DIEM, TENND FROM NGUOIDUNG ORDER BY DIEM DESC ";
             SqlConnection con = new SqlConnection(conn);
             con.Open();
@@ -411,9 +319,8 @@ namespace Server
             return chuoi;
 
         }
-
         //08
-        private string[] getInfo(string username)
+        private static string[] getInfo(string username)
         {
             string[] info = new string[4];
             info[0] = getBattleCount(username).ToString(); //số trận
@@ -427,19 +334,8 @@ namespace Server
             //string[] thongtin = getInfo("andinh");
             //MessageBox.Show(thongtin[0] + " " + thongtin[1] + " " + thongtin[2] + " " + thongtin[3]);
         }
-
-        #endregion
-
-        #region CHUYỂN TIẾP DỮ LIỆU ĐẾN CLIENT KHÁC
-
-        //09
-        private void PlayGame()
-        {
-
-        }
-
         //10
-        private bool changePass(string username, string oldPass, string newPass)
+        private static bool changePass(string username, string oldPass, string newPass)
         {
             if (SignIn(username, oldPass) == true)
             {
@@ -460,22 +356,74 @@ namespace Server
             }
             return false;
         }
-
         //11
-        private bool MatchUpdate(string username1, string username2, int ratio)
+        private static bool MatchUpdate(string username1, string username2, int ratio)
         {
             //ratio 0:username1 thua
             //ratio 1:username1 hòa
             //ratio 2:username1 thắng
-            return true;
-        }
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
 
+            string sql;
+            if (ratio == 0) //người thua là user1
+            {
+                if (getPoint(username1) < 2 && getPoint(username1) != -1) // điểm người user1 < 2 thì cập nhật điểm user1 = 0
+                {
+                    sql = "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user1,0) \n" +
+                          "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user2,2) \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = 0 WHERE TENND = @user1 \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = DIEM + 5 WHERE TENND = @user2";
+                }
+                else // người thua user1 có điểm lớn hơn 2 thì điểm = điểm - 2
+                {
+                    sql = "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user1,0) \n" +
+                          "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user2,2) \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = DIEM - 2 WHERE TENND = @user1 \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = DIEM + 5 WHERE TENND = @user2";
+                }
+            }
+            else if (ratio == 1)
+            {
+                sql = "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user1,1) \n" +
+                      "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user2,1) \n" +
+                      "UPDATE NGUOIDUNG SET DIEM = DIEM + 1 WHERE TENND = @user1 \n" +
+                      "UPDATE NGUOIDUNG SET DIEM = DIEM + 1 WHERE TENND = @user2";
+            }
+            else //ratio == 2
+            {
+                if (getPoint(username2) < 2 && getPoint(username2) != -1) // người thua user2 có điểm nhỏ hơn 2 thì cập nhật điểm = 0
+                {
+                    sql = "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user1,2) \n" +
+                          "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user2,0) \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = DIEM + 5 WHERE TENND = @user1 \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = 0 WHERE TENND = @user2";
+                }
+                else // người thua user2 có điểm lớn hơn 2 thì cập nhật điểm = điểm - 2
+                {
+                    sql = "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user1,2) \n" +
+                          "INSERT INTO BANCHOI(TENND,KQUA) VALUES (@user2,0) \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = DIEM + 5 WHERE TENND = @user1 \n" +
+                          "UPDATE NGUOIDUNG SET DIEM = DIEM - 2 WHERE TENND = @user2";
+                }
+            }
+            SqlCommand sc = new SqlCommand(sql, con);
+            sc.Parameters.AddWithValue("@user1", username1);
+            sc.Parameters.AddWithValue("@user2", username2);
+            int row = sc.ExecuteNonQuery();
+
+            con.Dispose();
+            sc.Dispose();
+            if (row == 4)
+                return true;
+            return false;
+        }
         #endregion
 
         #region CÁC HÀM PHỤ
 
-        private readonly Random _random = new Random();
-        private string RandomString(int size, bool lowerCase = false)
+        private static readonly Random _random = new Random();
+        private static string RandomString(int size, bool lowerCase = false)
         {
             var builder = new StringBuilder(size);
 
@@ -497,7 +445,7 @@ namespace Server
             return lowerCase ? builder.ToString().ToLower() : builder.ToString();
         }
 
-        private bool checkSignUp(string username, string inputGmail)
+        private static bool checkSignUp(string username, string inputGmail)
         {
 
 
@@ -517,7 +465,7 @@ namespace Server
             return kq;
         }
 
-        private int getBattleCount(string username)
+        private static int getBattleCount(string username)
         {
 
             SqlConnection con = new SqlConnection(conn);
@@ -541,7 +489,7 @@ namespace Server
             return 0;
         }
 
-        private int getBattleWinCount(string username)
+        private static int getBattleWinCount(string username)
         {
 
             SqlConnection con = new SqlConnection(conn);
@@ -565,7 +513,7 @@ namespace Server
             return 0;
         }
 
-        private int getBattleDrawCount(string username)
+        private static int getBattleDrawCount(string username)
         {
 
             SqlConnection con = new SqlConnection(conn);
@@ -589,21 +537,18 @@ namespace Server
             return 0;
         }
 
-        private double getWinRate(string username)
+        private static double getWinRate(string username)
         {
             int win = getBattleWinCount(username);
             int draw = getBattleDrawCount(username);
             int battle = getBattleCount(username);
-            double rate;
-            if (battle == 0)
-                rate = 0.0;
-            else
-                rate = (win + draw * 0.5) * 100.0 / battle;
+
+            double rate = (win + draw * 0.5) * 100.0 / battle;
             rate = Math.Round(rate, 1);
             return rate;
         }
 
-        private int getCurrRank(string username)
+        private static int getCurrRank(string username)
         {
 
 
@@ -634,166 +579,310 @@ namespace Server
             return rank;
         }
 
+        private static int getPoint(string username)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
 
+            string sql = "SELECT DIEM FROM NGUOIDUNG WHERE TENND = @ten";
+            SqlCommand sc = new SqlCommand(sql, con);
+            sc.Parameters.AddWithValue("@ten", username);
+            SqlDataReader sqlReader = sc.ExecuteReader();
+            int point = -1;
+            if (sqlReader.HasRows)
+            {
+                while (sqlReader.Read())
+                {
+                    point = (int)sqlReader.GetInt64(0);
+                }
+            }
+            con.Dispose();
+            sc.Dispose();
+            sqlReader.Close();
+            return point;
+        }
         #endregion
+
+
+        public static List<Client> Clients = new List<Client>();
 
         #region Socket
         public class Client
         {
             public Socket clientSock { get; set; }
+            public ReceivePacket Receive { get; set; }
+            public Socket opponentSock { get; set; }
+            public string Username { get; set; }
+            public string opponentUsername { get; set; }
             public int id { get; set; }
-            public byte[] data = new byte[8];
+
+            public int opponentid { get; set; }
+
             public bool isWaiting = false;
 
             public Client(Socket _socket, int _id)
             {
+                Receive = new ReceivePacket(_socket, _id);
+                Receive.StartReceiving();
                 clientSock = _socket;
                 id = _id;
             }
-            public void send(byte[] _data)
+            public void setClient(string _username)
             {
-                var fullPacket = new List<byte>();
-                fullPacket.AddRange(BitConverter.GetBytes(_data.Length));
-                fullPacket.AddRange(_data);
-                clientSock.Send(fullPacket.ToArray());
+                Username = _username;
+            }
+        }
+        public class ReceivePacket
+        {
+            private byte[] _buffer;
+            private Socket _receiveSocket;
+            public int _clientId;
+            public ReceivePacket(Socket receiveSocket, int id)
+            {
+                _receiveSocket = receiveSocket;
+                _clientId = id;
             }
             public void StartReceiving()
             {
                 try
                 {
-                    data = new byte[12];
-                    clientSock.BeginReceive(data, 0, 4, SocketFlags.None, ReceiveCallback, null);
+                    _buffer = new byte[4];
+                    _receiveSocket.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, ReceiveCallback, null);
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             private void ReceiveCallback(IAsyncResult AR)
             {
                 try
                 {
-                    data = new byte[8];
-                    if (clientSock.EndReceive(AR) > 1)
+                    
+                    if (_receiveSocket.EndReceive(AR) > 1)
                     {
-                        clientSock.Receive(data, data.Length, SocketFlags.None);
-                    }
-                    else
-                    {
-                        Disconnect();
-                    }
-                }
-                catch
-                {
-                    // if exeption is throw check if socket is connected because than you can startreive again else Dissconect
-                    if (!clientSock.Connected)
-                    {
-                        Disconnect();
-                    }
-                    else
-                    {
+                        _buffer = new byte[BitConverter.ToInt32(_buffer, 0)];
+                        _receiveSocket.Receive(_buffer, _buffer.Length, SocketFlags.None);
+
+                        //recvBytes = new byte[BitConverter.ToInt32(recvBuffer, 0)];
+                        //Clients[Clients.Count - 1].clientSock.Receive(recvBytes, 0, recvBytes.Length, SocketFlags.None);
+
+                        string stringData = "";
+                        string[] stringArr;
+
+                        if (_buffer.Length < 2)
+                        {
+                            MessageBox.Show("Something went Wrong!\t" +
+                                $"Not receiving enough bytes");
+                            return;
+                        }
+                        switch (_buffer[1])
+                        {
+                            case 1://ForgotPass - Gửi mail xác thực
+                                {
+                                    string email = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                    string randomCode = RandomString(5, true);
+                                    if (checkMail(email, randomCode))
+                                    {
+                                        stringData = username + " " + randomCode;
+                                        Send(stringData, 1, _receiveSocket);
+                                    }
+                                    else
+                                    {
+                                        Send(0, _receiveSocket);
+                                    }
+                                    break;
+                                }
+                            case 3://ForgotPass - Đổi mật khẩu
+                                {
+                                    stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                    stringArr = stringData.Split(' ');
+                                    if (NewPass(stringArr[0], stringArr[1]))
+                                    {
+                                        Send(1, _receiveSocket);
+                                    }
+                                    else
+                                    {
+                                        Send(0, _receiveSocket);
+                                    }
+                                    break;
+                                }
+                            case 4://Đăng nhập 
+                                {
+                                    stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2);
+                                    stringArr = stringData.Split(' ');
+                                    if (SignIn(stringArr[0], stringArr[1]))
+                                    {
+                                        Send(1, _receiveSocket);
+                                    }
+                                    else
+                                    {
+                                        Send(0, _receiveSocket);
+                                    }
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                    stringArr = stringData.Split(' ');
+                                    if (SignUp(stringArr))
+                                    {
+                                        Send(1, _receiveSocket);
+                                    }
+                                    else
+                                    {
+                                        Send(0, _receiveSocket);
+                                    }
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                    string[] RankList = Rank(stringData);
+                                    stringData = RankList[0] + ' ' + RankList[1] + ' '
+                                                + RankList[2] + ' ' + RankList[3] + ' '
+                                                + RankList[4] + ' ' + RankList[5] + ' '
+                                                + RankList[6] + ' ' + RankList[7] + ' ' + RankList[8];
+                                    Send(stringData, 1, _receiveSocket);
+                                    break;
+                                }
+                            case 8:
+                                {
+                                    stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                    stringArr = getInfo(stringData);
+                                    stringData = stringArr[0] + " " + stringArr[1] + " " + stringArr[2] + " " + stringArr[3];
+                                    Send(stringData, 1, _receiveSocket);
+                                    break;
+                                }
+                            case 9://09 Tạo phòng hoặc ghép cặp//19: gửi chuỗi byte nước đi, //29 gửi string chat
+                                switch (_buffer[0])
+                                {
+                                    case 0://09 và username
+                                        stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2);//username
+                                        _buffer = new byte[2];
+                                        Clients[Clients.Count - 1].Username = stringData;
+                                        if (Clients.Count % 2 == 0)
+                                        {
+                                            foreach (Client client in Clients)
+                                            {
+                                                if (client.isWaiting)
+                                                {
+                                                    client.isWaiting = false;
+
+                                                    Clients[Clients.Count - 1].opponentSock = client.clientSock;
+                                                    Clients[Clients.Count - 1].opponentUsername = client.Username;
+
+                                                    client.opponentSock = Clients[Clients.Count - 1].clientSock;
+                                                    client.opponentUsername = Clients[Clients.Count - 1].Username;
+
+
+                                                    _buffer[0] = 1;
+                                                    _buffer[1] = 0;
+                                                    Send(_buffer, _receiveSocket);//Gửi về player sau
+
+                                                    _buffer[1] = 1;
+                                                    Send(_buffer, Clients[Clients.Count - 1].opponentSock);//Gửi về player trước, quân trắng
+
+                                                    
+                                                   
+                                                    //recvBuffer = new byte[4];
+                                                    //client.opponentSock.BeginReceive(recvBuffer, 0, recvBuffer.Length, SocketFlags.None, recvCallBack, recvSock);
+
+                                                    break;
+                                                }
+                                            }
+                                            Clients[Clients.Count - 1].isWaiting = true;
+                                        }
+                                        else
+                                        {
+                                            Clients[Clients.Count - 1].isWaiting = true;
+                                        }
+                                        break;
+                                    case 1:
+                                        //19 gửi chuỗi byte nước đi 
+                                        //recvBytes = byte[8] với [2]: 1win/0tiếp tục chơi [3]:  [4]->[7]: nước di chuyển []còn lại là string username
+
+                                        stringData = Encoding.UTF8.GetString(_buffer, 8, _buffer.Length - 8);//username
+                                        _buffer[0] = 2;
+                                        if (_buffer[2] == 1)//Nếu win
+                                        {
+                                            //Cập nhật điểm sql
+                                            MatchUpdate(stringData, Clients[Clients.FindIndex(x => x.Username == stringData)].opponentUsername, 1);
+
+                                            //Gửi thông tin về báo rằng ván đấu kết thúc
+                                                
+                                        }
+
+                                        //Chuyển tiếp thông tin qua người chơi khác
+                                        Send(_buffer, Clients[Clients.FindIndex(x => x.Username == stringData)].opponentSock);
+                                        break;
+
+                                    case 2://29 gửi string chat
+                                        stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                        Send(stringData, 3, Clients[Clients.Count - 1].opponentSock);
+                                        break;
+
+                                }
+                                break;
+                            case 0:
+                                {
+                                    stringData = Encoding.UTF8.GetString(_buffer, 2, _buffer.Length - 2).Trim();
+                                    stringArr = stringData.Split(' ');
+                                    if (changePass(stringArr[0], stringArr[1], stringArr[2]))
+                                        Send(1, _receiveSocket);
+                                    else
+                                        Send(0, _receiveSocket);
+                                    break;
+                                }
+                        }
+
                         StartReceiving();
                     }
-                }
-            }
-
-            private void Disconnect()
-            {
-                // Close connection
-                clientSock.Disconnect(true);
-
-            }
-        }
-        public static class ManageClient
-        {
-            static List<Client> Clients = new List<Client>();
-
-            public static void AddClient(Socket _socket)
-            {
-                Clients.Add(new Client(_socket, Clients.Count));
-                //MessageBox.Show($"adding new socket success! id:{Clients[Clients.Count - 1].id}");
-
-                //Có người đang đợi
-                if (Clients.Count % 2 == 0)
-                {
-                    foreach (Client client in Clients)
+                    else
                     {
-                        if (client.isWaiting)
-                        {
-                            client.isWaiting = false;
-                            MatchBetween(client, Clients[Clients.Count - 1]);
-                            break;
-                        }
+                        Disconnect();
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Clients[Clients.Count - 1].isWaiting = true;
+                    if (!_receiveSocket.Connected)
+                    {
+                        Disconnect();
+                    }
+                    else
+                    {
+                        MessageBox.Show(ex.ToString());
+                        //StartReceiving();
+                    }
                 }
+            }
+            private void Disconnect()
+            {
+                _receiveSocket.Disconnect(true);
+                ManageClient.RemoveClient(_clientId);
+            }
+        }
+        
+
+        
+
+        
+        public static class ManageClient
+        {
+
+            public static void AddClient(Socket _socket, int _id)
+            {
+                Clients.Add(new Client(_socket, Clients.Count));
             }
 
             public static void RemoveClient(int _id)
             {
                 int findIndex = Clients.FindIndex(x => x.id == _id);
                 Clients.RemoveAt(findIndex);
-                MessageBox.Show($"Remove id {_id} which is Clients[{findIndex}] ");
             }
 
-            public static void MatchBetween(Client firstPlayer, Client secondPlayer)
-            {
-                //buffer để gửi
-                byte[] buffer = new byte[8];
-
-                #region TRƯỚC VÁN ĐẤU
-
-                //Quy định quân đen hay trắng
-                buffer[0] = 1;
-                firstPlayer.send(buffer);
-
-                buffer[0] = 0;
-                secondPlayer.send(buffer);
-
-                #endregion
-
-                #region VÁN ĐẤU
-
-                bool WhiteToPlay = true;
-                while (true)
-                {
-                    buffer = new byte[8];
-                    if (WhiteToPlay)
-                    {
-                        firstPlayer.StartReceiving();
-
-                        while (firstPlayer.data[4] == firstPlayer.data[6] &&
-                            firstPlayer.data[5] == firstPlayer.data[7])
-                        {
-                            Thread.Sleep(1000);
-                        }
-                        buffer = firstPlayer.data;
-                        secondPlayer.send(buffer);
-                    }
-                    else
-                    {
-                        secondPlayer.StartReceiving();
-
-                        while (secondPlayer.data[4] == secondPlayer.data[6] &&
-                            secondPlayer.data[5] == secondPlayer.data[7])
-                        {
-                            Thread.Sleep(1000);
-                        }
-
-                        buffer = secondPlayer.data;
-                        firstPlayer.send(buffer);
-                    }
-                    WhiteToPlay = !WhiteToPlay;
-                    //Ván kết thúc
-
-                }
-
-                #endregion
-            }
+            
         }
         #endregion
     }
 }
-
-
-

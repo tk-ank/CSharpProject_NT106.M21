@@ -31,9 +31,10 @@ namespace ChessProject
         bool localPlay = PlayGame.localPlay;
         int localPlayer = -1;
         static Socket clientSocket = ServerConnect.clientSocket;
-        
-        byte[] sendBuffer = new byte[8];
-        byte[] recvBuffer = new byte[8];
+        static string username = ServerConnect.username;
+
+        byte[] sendBuffer;
+        byte[] recvBuffer;
         byte[] recvBytes;
         //List buffer {4 byte đầu là độ dài chuỗi byte, 8 byte sau là dữ liệu}
         //buffer = {
@@ -74,8 +75,8 @@ namespace ChessProject
 
             if (localPlay == true)
             {
-                ServerConnect.Send("asd", 0, 9);
-                StartReceiving(ServerConnect.clientSocket);
+                ServerConnect.Send(ServerConnect.username, 0, 9);
+                StartReceiving(clientSocket);
             }
 
             DrawPieces(chessBoard);
@@ -124,11 +125,15 @@ namespace ChessProject
                     }
                     if (localPlay)
                     {
+                        sendBuffer = new byte[8];
+                        sendBuffer[0] = 1;
+                        sendBuffer[1] = 9;
+                        //sendBuffer[2] = (byte)
                         sendBuffer[4] = (byte)selectedPiece.x;
                         sendBuffer[5] = (byte)selectedPiece.y;
                         sendBuffer[6] = (byte)(a.Column - 1);
                         sendBuffer[7] = (byte)(a.Row - 1);
-                        Send(sendBuffer);
+                        ServerConnect.Send(sendBuffer,ServerConnect.username);
                         StartReceiving(clientSocket);
                     }
 
@@ -158,11 +163,15 @@ namespace ChessProject
                 }
                 if (localPlay)
                 {
+                    sendBuffer = new byte[8];
+                    sendBuffer[0] = 1;
+                    sendBuffer[1] = 9;
+                    //sendBuffer[2] = (byte)
                     sendBuffer[4] = (byte)selectedPiece.x;
                     sendBuffer[5] = (byte)selectedPiece.y;
                     sendBuffer[6] = (byte)(a.Column - 1);
                     sendBuffer[7] = (byte)(a.Row - 1);
-                    Send(sendBuffer);
+                    ServerConnect.Send(sendBuffer, ServerConnect.username);
                     StartReceiving(clientSocket);
                 }
                 selectedPlayer = -1;
@@ -293,24 +302,11 @@ namespace ChessProject
             #endregion
 
         }
+
         public void Send(byte[] data)
         {
             try
             {
-                if (localPlayer == 1)
-                {
-                    data[0] = 1;
-                }
-                else if (localPlayer == 0)
-                {
-                    data[0] = 0;
-                }
-                else
-                {
-                    data[0] = 2;
-                    MessageBox.Show("Error 01, localPlayer = -1");
-                }
-
                 var fullPacket = new List<byte>();
                 fullPacket.AddRange(BitConverter.GetBytes(data.Length));
                 fullPacket.AddRange(data);
@@ -321,6 +317,22 @@ namespace ChessProject
                 throw new Exception();
             }
         }
+        public void Send(byte[] data, string username)
+        {
+            try
+            {
+                var fullPacket = new List<byte>();
+                fullPacket.AddRange(BitConverter.GetBytes(data.Length + username.Length));//Gửi byte độ dài chuỗi
+                fullPacket.AddRange(data);//data[8 bit với 2 bit để điều hướng]
+                fullPacket.AddRange(Encoding.UTF8.GetBytes(username));
+                clientSocket.Send(fullPacket.ToArray());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+
+        }
         public void StartReceiving(Socket _sock)
         {
 
@@ -328,9 +340,12 @@ namespace ChessProject
             try
             {
                 recvBuffer = new byte[4];
-                clientSocket.BeginReceive(recvBuffer, 0, 4, SocketFlags.None, ReceiveCallback, null);
+                clientSocket.BeginReceive(recvBuffer, 0, recvBuffer.Length, SocketFlags.None, ReceiveCallback, null);
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         private void ReceiveCallback(IAsyncResult AR)
         {
@@ -338,36 +353,39 @@ namespace ChessProject
             {
                 if (clientSocket.EndReceive(AR) > 1)
                 {
-                    recvBuffer = new byte[8];
+                    recvBytes = new byte[BitConverter.ToInt32(recvBuffer, 0)];
+                    clientSocket.Receive(recvBytes, 0, recvBytes.Length, SocketFlags.None);
 
-                    clientSocket.Receive(recvBuffer, recvBuffer.Length, SocketFlags.None);
-
-                    //MessageBox.Show($"recvBuffer:\r\n[0]: {recvBuffer[0]}\r\n[1]: {recvBuffer[1]}\r\n[2]: {recvBuffer[2]}\r\n[3]: {recvBuffer[3]}\r\n" +
-                    //    $"[4]: {recvBuffer[4]}\r\n[5]: {recvBuffer[5]}\r\n[6]: {recvBuffer[6]}\r\n[7] {recvBuffer[7]}");
-
-                    if (localPlayer == -1)
+                    if (recvBytes[0] == 1)//Gói tin để client biết mình quân trắng hay đen
                     {
-                        localPlayer = recvBuffer[0];
+                        localPlayer = recvBytes[1];
                         if (localPlayer == 1)
                         {
-                            //MessageBox.Show("You play first");
+                            MessageBox.Show("Bạn là quân trắng, bạn đi trước!");
                         }
                         else if (localPlayer == 0)
                         {
-                            //MessageBox.Show("wait for moves");
-                            StartReceiving(clientSocket);
+                            MessageBox.Show("Bạn là quân đen, bạn đợi nước đi của đối phương!");
                         }
                     }
-                    else
+                    else if (recvBytes[0] == 2)
                     {
                         chessBoard.SwapPlayerTurn();
                         Invoke(new Action(() =>
                         {
-                            chessBoard.PieceActions(recvBuffer[4], recvBuffer[5]);
-                            chessBoard.ActionPiece(recvBuffer[4], recvBuffer[5], recvBuffer[6], recvBuffer[7]);
+                            chessBoard.PieceActions(recvBytes[4], recvBytes[5]);
+                            chessBoard.ActionPiece(recvBytes[4], recvBytes[5], recvBytes[6], recvBytes[7]);
                             DrawPieces(chessBoard);
                         }
                         ));
+                    }
+                    else if (recvBytes[0] == 3)
+                    {
+                        string tempText = Encoding.UTF8.GetString(recvBytes, 1, recvBytes.Length - 1).Trim();
+                        Invoke(new Action(() =>
+                        {
+                            lstChatBox.Items.Add(tempText);
+                        }));
                     }
                 }
                 else
@@ -375,7 +393,7 @@ namespace ChessProject
                     Disconnect();
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 if (!clientSocket.Connected)
                 {
@@ -383,13 +401,43 @@ namespace ChessProject
                 }
                 else
                 {
-                    StartReceiving(clientSocket);
+                    //StartReceiving(clientSocket);
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
         private void Disconnect()
         {
             clientSocket.Disconnect(true);
+        }
+
+        private void btnResign_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbInput.TextLength == 0)
+                {
+                    MessageBox.Show("Nội dung không được để trống");
+                    return;
+                }
+
+                lstChatBox.Items.Add(tbInput.Text);
+                var fullPacket = new List<byte>();
+                fullPacket.AddRange(BitConverter.GetBytes(username.Length +tbInput.TextLength + 2));//Gửi byte độ dài chuỗi
+                fullPacket.Add(2);
+                fullPacket.Add(9);
+                fullPacket.AddRange(Encoding.UTF8.GetBytes(username+": "+tbInput.Text));
+                clientSocket.Send(fullPacket.ToArray());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
         }
     }
 }

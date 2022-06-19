@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPass));
             this.pnForgot = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,9 +44,8 @@
             this.pnForgot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(68)))), ((int)(((byte)(66)))));
             this.pnForgot.Controls.Add(this.Title);
             this.pnForgot.Location = new System.Drawing.Point(0, 0);
-            this.pnForgot.Margin = new System.Windows.Forms.Padding(4);
             this.pnForgot.Name = "pnForgot";
-            this.pnForgot.Size = new System.Drawing.Size(533, 92);
+            this.pnForgot.Size = new System.Drawing.Size(400, 75);
             this.pnForgot.TabIndex = 23;
             // 
             // Title
@@ -54,10 +54,9 @@
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(230)))));
-            this.Title.Location = new System.Drawing.Point(121, 31);
-            this.Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Title.Location = new System.Drawing.Point(91, 25);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(274, 46);
+            this.Title.Size = new System.Drawing.Size(219, 37);
             this.Title.TabIndex = 21;
             this.Title.Text = "ĐỔI MẬT KHẨU";
             // 
@@ -66,9 +65,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(13, 178);
+            this.label1.Location = new System.Drawing.Point(10, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.Size = new System.Drawing.Size(139, 20);
             this.label1.TabIndex = 27;
             this.label1.Text = "Nhập lại mật khẩu:";
             // 
@@ -77,9 +77,10 @@
             this.Password.AutoSize = true;
             this.Password.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.Password.Location = new System.Drawing.Point(13, 123);
+            this.Password.Location = new System.Drawing.Point(10, 100);
+            this.Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(99, 25);
+            this.Password.Size = new System.Drawing.Size(78, 20);
             this.Password.TabIndex = 26;
             this.Password.Text = "Mật khẩu:";
             // 
@@ -87,20 +88,20 @@
             // 
             this.tbReType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbReType.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbReType.Location = new System.Drawing.Point(200, 172);
-            this.tbReType.Margin = new System.Windows.Forms.Padding(4);
+            this.tbReType.Location = new System.Drawing.Point(150, 140);
             this.tbReType.Name = "tbReType";
-            this.tbReType.Size = new System.Drawing.Size(313, 36);
+            this.tbReType.PasswordChar = '*';
+            this.tbReType.Size = new System.Drawing.Size(235, 30);
             this.tbReType.TabIndex = 25;
             // 
             // tbPassword
             // 
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(200, 117);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPassword.Location = new System.Drawing.Point(150, 95);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(313, 36);
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(235, 30);
             this.tbPassword.TabIndex = 22;
             // 
             // btnConfirm
@@ -108,10 +109,9 @@
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(68)))), ((int)(((byte)(66)))));
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(367, 222);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirm.Location = new System.Drawing.Point(275, 180);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(133, 43);
+            this.btnConfirm.Size = new System.Drawing.Size(100, 35);
             this.btnConfirm.TabIndex = 24;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             // 
             // ResetPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(533, 277);
+            this.ClientSize = new System.Drawing.Size(400, 225);
             this.Controls.Add(this.pnForgot);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Password);
@@ -130,7 +130,7 @@
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.btnConfirm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResetPass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResetPass";

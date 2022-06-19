@@ -25,7 +25,6 @@ namespace ChessProject
             }
 
             ServerConnect.Send(ForgotPass.Username, tbPassword.Text, 0, 3);
-
             ServerConnect.WaitForData();
 
             if (ServerConnect.recvBytes[0] == 1)

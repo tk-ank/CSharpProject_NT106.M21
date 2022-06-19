@@ -263,6 +263,9 @@ namespace ChessProject
                     this.coordinates.SetToolTip(button, String.Format("({0}, {1})", x, y));
                 }
             }
+
+            
+
         }
         
 
@@ -276,8 +279,9 @@ namespace ChessProject
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             PlayGame pg = new PlayGame();
+            this.Close();
             pg.Show();
         }
     }

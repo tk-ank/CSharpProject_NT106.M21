@@ -356,6 +356,7 @@
             this.btnResign.TabIndex = 3;
             this.btnResign.Text = "Đầu hàng";
             this.btnResign.UseVisualStyleBackColor = false;
+            this.btnResign.Click += new System.EventHandler(this.btnResign_Click);
             // 
             // btnDraw
             // 
@@ -380,6 +381,7 @@
             this.btnSend.TabIndex = 5;
             this.btnSend.Text = "Gửi";
             this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // btnMute
             // 

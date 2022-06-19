@@ -79,6 +79,7 @@ namespace Server
             this.tbLocalName.Name = "tbLocalName";
             this.tbLocalName.Size = new System.Drawing.Size(300, 30);
             this.tbLocalName.TabIndex = 3;
+            this.tbLocalName.Text = "DESKTOP-AG3SDR7\\SQLEXPRESS";
             // 
             // tbPassword
             // 
@@ -89,6 +90,7 @@ namespace Server
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(300, 30);
             this.tbPassword.TabIndex = 4;
+            this.tbPassword.Text = "123321";
             // 
             // Server
             // 

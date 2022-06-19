@@ -16,13 +16,14 @@ namespace ChessProject
         {
             InitializeComponent();
         }
+
         private void bntSave_Click(object sender, EventArgs e)
         {
             if (tbPassword.TextLength == 0 || tbNewPass.TextLength == 0
                 || tbConfirm.TextLength == 0)
                 return;
             string stringData = ServerConnect.username + " " + tbPassword.Text + " " + tbNewPass.Text;
-            ServerConnect.Send(stringData, 1, 0);
+            ServerConnect.Send(stringData,1,0);
             ServerConnect.WaitForData();
             if (ServerConnect.recvBytes[0] == 1)
             {
@@ -38,8 +39,5 @@ namespace ChessProject
             this.Hide();
             inf.Show();
         }
-
-        
-        
     }
 }

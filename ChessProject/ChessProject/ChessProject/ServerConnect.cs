@@ -75,6 +75,14 @@ namespace ChessProject
                 }
             }
         }
+        public static void Send(byte[] data, string sendString)
+        {
+            List<byte> fullPackage = new List<byte>();
+            fullPackage.AddRange(BitConverter.GetBytes(sendString.Length + data.Length));
+            fullPackage.AddRange(data);
+            fullPackage.AddRange(Encoding.UTF8.GetBytes(sendString));
+            ServerConnect.clientSocket.Send(fullPackage.ToArray());
+        }
         public static void Send(string sendString, byte firstByte, byte secondByte)
         {
             List<byte> fullPackage = new List<byte>();
@@ -114,6 +122,7 @@ namespace ChessProject
             ServerConnect.clientSocket.Send(fullPackage.ToArray());
         }
         #endregion
+
         private void btnConnect_Click(object sender, EventArgs e)
         {
             if (!TryToConnect())

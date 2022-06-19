@@ -87,13 +87,10 @@ namespace ChessProject
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                ServerConnect.username = "";
-                this.Close();
-                SignIn signin = new SignIn();
-                signin.Show();
-            }
+            ServerConnect.username = "";
+            this.Close();
+            SignIn si = new SignIn();
+            si.Show();
         }
     }
 }
