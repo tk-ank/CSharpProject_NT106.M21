@@ -18,17 +18,15 @@ namespace ChessProject
         }
 
         public static bool localPlay = false;
-        private void lbPractise_Click(object sender, EventArgs e)
+        private void btnPractise_Click(object sender, EventArgs e)
         {
             Form sp = new SinglePlay();
-            this.Hide();
-            sp.Show ();
+            sp.Show();
         }
 
-        private void lbRank_Click(object sender, EventArgs e)
+        private void btnRank_Click(object sender, EventArgs e)
         {
             localPlay = true;
-            this.Close();
             PlayChess PlayLAN = new PlayChess();
             PlayLAN.Show();
         }

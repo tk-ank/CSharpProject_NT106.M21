@@ -813,7 +813,6 @@ namespace Server
                                             MatchUpdate(stringData, Clients[Clients.FindIndex(x => x.Username == stringData)].opponentUsername, 1);
 
                                             //Gửi thông tin về báo rằng ván đấu kết thúc
-                                                
                                         }
 
                                         //Chuyển tiếp thông tin qua người chơi khác
@@ -866,13 +865,8 @@ namespace Server
             }
         }
         
-
-        
-
-        
         public static class ManageClient
         {
-
             public static void AddClient(Socket _socket, int _id)
             {
                 Clients.Add(new Client(_socket, Clients.Count));
@@ -883,8 +877,6 @@ namespace Server
                 int findIndex = Clients.FindIndex(x => x.id == _id);
                 Clients.RemoveAt(findIndex);
             }
-
-            
         }
         #endregion
     }

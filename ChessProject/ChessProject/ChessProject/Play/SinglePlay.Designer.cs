@@ -325,7 +325,7 @@
             this.btnNewgame.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewgame.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNewgame.Location = new System.Drawing.Point(550, 700);
-            this.btnNewgame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNewgame.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewgame.Name = "btnNewgame";
             this.btnNewgame.Size = new System.Drawing.Size(125, 35);
             this.btnNewgame.TabIndex = 3;

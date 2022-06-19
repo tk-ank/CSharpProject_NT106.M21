@@ -411,11 +411,6 @@ namespace ChessProject
             clientSocket.Disconnect(true);
         }
 
-        private void btnResign_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
