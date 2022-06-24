@@ -1,6 +1,8 @@
 # CSharpProject_NT106.M21
 Đề tài đồ án: Ứng dụng quản lý thời gian
 
+Cả folder báo cáo (đã chỉnh sửa) tụi em cập nhật luôn ở git
+
 Vì chưa thể xử lý hết xung đột của LAN và SQL nên tụi em tách ra làm 2 file 'ChessProject' và 'Local' để cô dễ đánh giá.
 File 'ChessProject' bao gồm Client và Server, giao diện Menu, đăng nhập tới Ip local host, và truy xuất SQL (Chơi cờ chưa hoàn chỉnh)
 
@@ -21,4 +23,3 @@ Tham khảo các thao tác của client ở video demo từ ... đến ...
 File 'Local' bao gồm Client và Server, thực hiện chơi cờ vua ở mạng LAN 
 Tham khảo video demo từ ... đến ...
 
-Cả folder báo cáo (đã chỉnh sửa) tụi em cập nhật luôn ở git
