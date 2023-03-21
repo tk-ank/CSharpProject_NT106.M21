@@ -1,5 +1,5 @@
 # CSharpProject_NT106.M21
-Đề tài đồ án: Ứng dụng quản lý thời gian
+Đề tài đồ án: Ứng dụng chơi cờ vua mở rộng
 
 Cả folder báo cáo (đã chỉnh sửa) tụi em cập nhật luôn ở git
 
